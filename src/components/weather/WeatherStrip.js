@@ -47,12 +47,11 @@ class WeatherStrip extends React.Component {
     }
     
     componentDidMount() {
-        /*
-        this.setState({
-            data: this.parseData(mockdata)
-        })
-        return;
-        */
+        this.getData();
+        setInterval(this.getData.bind(this), 60000 * 60);
+    }
+
+    getData() {
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${LAT}&lon=${LON}&
         exclude=hourly,daily&units=imperial&appid=${API_KEY}`)
             .then(response => response.json())

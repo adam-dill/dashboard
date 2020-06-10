@@ -16,6 +16,11 @@ class MidnightTrain extends React.Component {
 
     componentDidMount() {
         this.getData();
+        this.updateStatus();
+        setInterval(() => {
+            this.getData();
+            this.updateStatus();
+        }, 60000 * 10);
     }
 
     updateStatus() {
