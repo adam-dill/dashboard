@@ -39,7 +39,7 @@ body {
     font-weight: 700;
 }
 
-.fadeIn {
+.fade-in {
     animation: fadein 1s;
 }
 

@@ -54,7 +54,7 @@ class Headlines extends React.Component {
         const items = selectedItems
             .map(value => {
                 return (
-                    <div key={value.key} className="list-group-item fw-500 fadeIn">{value.title}</div>
+                    <div key={value.key} className="list-group-item fw-500 fade-in">{value.title}</div>
                 );
             });
         return (

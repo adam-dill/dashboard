@@ -1,3 +1,4 @@
+export { default as Background } from './Background/Background';
 export { default as DigitalClock } from './clock/DigitalClock';
 export { default as Headlines } from './news/Headlines';
 export { default as InternationalClock } from './clock/InternationalClock';

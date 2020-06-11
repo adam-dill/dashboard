@@ -1,6 +1,5 @@
 import React from 'react';
-import Background from './assets/images/wallpaper/milwaukee.jpg';
-import { DigitalClock, InternationalClock, WeatherStrip, MiniCalendar, MidnightTrain, Headlines } from './components';
+import { Background, DigitalClock, InternationalClock, WeatherStrip, MiniCalendar, MidnightTrain, Headlines } from './components';
 
 class App extends React.Component {
     constructor(props) {
@@ -23,7 +22,7 @@ class App extends React.Component {
     render() { 
         return (
             <div className="vw-100 vh-100">
-                <img src={this.state.backgroundImage} className="background-image vw-100 vh-100 opacity-3" />
+                <Background />
                 <div className="container">
                     <div className="row my-4">
                         <DigitalClock />
