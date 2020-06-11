@@ -97,30 +97,46 @@ class MidnightTrain extends React.Component {
                 .isAfter(moment(currentTime));
     }
 
-    render() { 
+    renderEntry(entry, index) {
+        const format = value => (value < 10) ? `0${value}` : `${value}`;
+        const minutes = Math.floor(entry.duration);
+        const seconds = Math.floor(60 * (entry.duration - minutes));
+        const display = (minutes !== 0)
+            ? `${minutes} min ${format(seconds)} sec`
+            : `${format(seconds)} sec`;
+        return (
+            <div key={index} className={`d-flex justify-content-between border-bottom`}>
+                <div>{entry.time}</div>
+                <small> {display}</small>
+            </div>
+        );
+    }
+
+    renderStatus() {
         const {temperature, lastUpdate, CURRENT_TIMESTAMP} = this.state.status;
         const online = this.isOnline(lastUpdate, CURRENT_TIMESTAMP);
         const onlineText = online ? 'online' : 'offline';
         const onlineStyle = online ? 'badge-success' : 'badge-danger';
         const temperatureDisplay = (online) ? this.formatDegree(temperature) : null;
-        const items = this.state.data
-            .map((value, index) => {
-                return (
-                    <div key={index} className="d-flex justify-content-between">
-                        <div className="w-100 mb-1">{value.time}</div>
-                    </div>
-                );
-            });
+
         return (
             <>
-                <div className="d-flex align-items-center">
-                    <div className="title mr-2">Midnight Train</div>
-                    <div>
-                        <span className="small pointer"
-                            dangerouslySetInnerHTML={{__html:temperatureDisplay}} 
-                            onClick={this.handleTemperatureClick} />
-                        <span className={`badge ${onlineStyle} ml-2 p-2 text-uppercase`}>{onlineText}</span>    
-                    </div>
+                <span className="small pointer"
+                    dangerouslySetInnerHTML={{__html:temperatureDisplay}} 
+                    onClick={this.handleTemperatureClick} />
+                <span className={`badge ${onlineStyle} ml-2 p-2 text-uppercase`}>{onlineText}</span>
+            </>
+        )
+    }
+
+    render() {
+        const items = this.state.data
+            .map((value, index) => this.renderEntry(value, index));
+        return (
+            <>
+                <div className="d-flex align-items-center justify-content-between">
+                    <div className="title">Midnight Train</div>
+                    <div>{this.renderStatus()}</div>
                 </div>
                 {items}
             </>
