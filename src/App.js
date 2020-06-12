@@ -11,12 +11,15 @@ class App extends React.Component {
 
     componentDidMount() {
         document.body.addEventListener('mousemove', () => {
-            document.body.classList.remove('nocuror');
+            document.body.classList.remove('nocursor');
             clearTimeout(this.mouseMovementTimer);
             this.mouseMovementTimer = setTimeout(() => {
-                document.body.classList.add('nocuror');
-            }, 3000)
-        })
+                document.body.classList.add('nocursor');
+            }, 3000);
+        });
+        setInterval(() => {
+            document.body.dispatchEvent(new KeyboardEvent('keydown',{'key':'a'}));
+        }, 1000);
     }
 
     render() { 

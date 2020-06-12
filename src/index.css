@@ -11,7 +11,7 @@ body {
   overflow: hidden;
 }
 
-.nocuror { cursor: none; }
+.nocursor { cursor: none; }
 
 .background-image {
     position: absolute;
