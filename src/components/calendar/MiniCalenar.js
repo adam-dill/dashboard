@@ -67,11 +67,11 @@ class MiniCalendar extends React.Component {
             return null;
         }
         return (
-            <div key={index} className="mb-3">
+            <div key={`group-${index}`} className="mb-3">
                 <div className="title">{moment(get(group, '0.date')).format('ddd, MMM Do')}</div>
-                {group.map(value => {
+                {group.map((value, i) => {
                     return (
-                        <div key={index} className="d-flex border-bottom py-2 justify-content-between">
+                        <div key={`label-${index}-${i}`} className="d-flex border-bottom py-2 justify-content-between">
                             {value.label}
                         </div>
                     );
