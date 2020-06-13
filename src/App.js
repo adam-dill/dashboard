@@ -17,9 +17,6 @@ class App extends React.Component {
                 document.body.classList.add('nocursor');
             }, 3000);
         });
-        setInterval(() => {
-            document.body.dispatchEvent(new KeyboardEvent('keydown',{'key':'a'}));
-        }, 1000);
     }
 
     render() { 

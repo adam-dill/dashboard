@@ -33,7 +33,8 @@ class Headlines extends React.Component {
                     });
                 this.setState({data: articles, currentPosition: 0});
                 this.startTicker();
-            });
+            })
+            .catch(e => setTimeout(this.loadData.bind(this), 1000));
     }
 
     startTicker() {

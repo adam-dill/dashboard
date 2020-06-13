@@ -59,7 +59,8 @@ class WeatherStrip extends React.Component {
                 this.setState({
                     data: this.parseData(data)
                 })
-            });
+            })
+            .catch(e => setTimeout(this.getData.bind(this), 1000));
     }
 
     parseData(data) {

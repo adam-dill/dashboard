@@ -33,7 +33,8 @@ class MidnightTrain extends React.Component {
                     data.forEach(item => newStatus[item.key] = item.value);
                     this.setState({status: newStatus});
                 }
-            });
+            })
+            .catch(e => setTimeout(this.updateStatus.bind(this), 1000));
     }
 
     getData() {
@@ -42,7 +43,8 @@ class MidnightTrain extends React.Component {
             .then(result => {
                 const entries = this.normalizeEntries(result.data.map(value => this.processEntry(value)));
                 this.setState({data: entries});
-            });
+            })
+            .catch(e => setTimeout(this.getData.bind(this), 1000));
     }
 
     processEntry(entry) {
