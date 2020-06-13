@@ -37,10 +37,11 @@ int main(void) {
 
 void hdmi(int on) {
 	if (on && !hdmiState) {
-		system("/opt/vc/bin/tvservice -p && xdotool click 1");
+		system("tvservice -p");
+		system("xdotool mousemove 100 100 && xdotool click 1");
 		hdmiState = 1;
 	} else if (!on && hdmiState) {
-		system("/opt/vc/bin/tvservice -o");
+		system("tvservice -o");
 		hdmiState = 0;
 	}
 }
