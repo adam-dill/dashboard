@@ -9,16 +9,6 @@ class App extends React.Component {
         }
     }
 
-    componentDidMount() {
-        document.body.addEventListener('mousemove', () => {
-            document.body.classList.remove('nocursor');
-            clearTimeout(this.mouseMovementTimer);
-            this.mouseMovementTimer = setTimeout(() => {
-                document.body.classList.add('nocursor');
-            }, 3000);
-        });
-    }
-
     render() { 
         return (
             <div className="vw-100 vh-100">
@@ -33,9 +23,7 @@ class App extends React.Component {
                     </div>
                     <div className="row">
                         <div className="col-6">
-                            <MiniCalendar title="Today" />
-                            <div className="mt-4"></div>
-                            <MiniCalendar title="Tomorrow" />
+                            <MiniCalendar />
                         </div>
                         <div className="col-6">
                             <Headlines />

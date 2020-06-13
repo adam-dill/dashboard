@@ -6,19 +6,9 @@ import Day2 from '../../assets/images/weather/day-2.png';
 import Day3 from '../../assets/images/weather/day-3.png';
 import Day4 from '../../assets/images/weather/day-4.png';
 import Day5 from '../../assets/images/weather/day-5.png';
-import Day6 from '../../assets/images/weather/day-6.png';
 import Day7 from '../../assets/images/weather/day-7.png';
 import Day8 from '../../assets/images/weather/day-8.png';
 import Day9 from '../../assets/images/weather/day-9.png';
-import Night1 from '../../assets/images/weather/night-1.png';
-import Night2 from '../../assets/images/weather/night-2.png';
-import Night3 from '../../assets/images/weather/night-3.png';
-import Night4 from '../../assets/images/weather/night-4.png';
-import Night5 from '../../assets/images/weather/night-5.png';
-import Night6 from '../../assets/images/weather/night-6.png';
-import Night7 from '../../assets/images/weather/night-7.png';
-import Night8 from '../../assets/images/weather/night-8.png';
-import Night9 from '../../assets/images/weather/night-9.png';
 
 // https://openweathermap.org/api/one-call-api
 const API_KEY = "220bb8d4c31c356359f76bfe6f628169";
