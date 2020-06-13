@@ -21,10 +21,13 @@ int main(void) {
 	
 	pinMode(resetPin, INPUT);
 	pullUpDnControl(resetPin, PUD_DOWN);
+	pinMode(motionPin, INPUT);
+	pullUpDnControl(motionPin, PUD_DOWN);
 	
 	while(1) {
 		if (resetting == 0 && digitalRead(resetPin) == HIGH) {
 			resetting = 1;
+			
 			// TODO: notify in the display update is occuring.
 			system("npm run update");
 		}
