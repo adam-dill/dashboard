@@ -10,7 +10,7 @@
 
 void hdmi(int);
 
-int hdmiState = 0;
+int hdmiState = 1;
 
 int main(void) {
 	int resetting = 0;
