@@ -6,6 +6,7 @@
 
 #define resetPin 0
 #define motionPin 1
+#define resetLedPin 2
 
 void hdmi(int);
 
@@ -23,11 +24,17 @@ int main(void) {
 	pullUpDnControl(resetPin, PUD_DOWN);
 	pinMode(motionPin, INPUT);
 	pullUpDnControl(motionPin, PUD_DOWN);
+	pinMode(resetLedPin, OUTPUT);
+	digitalWrite(resetLedPin, LOW);
 	
 	while(1) {
+		if (resetting == 1) {
+			int currentResetLed = digitalRead(resetLedPin);
+			digitalWrite(resetLedPin, !currentResetLed);
+		}
 		if (resetting == 0 && digitalRead(resetPin) == HIGH) {
 			resetting = 1;
-			
+			digitalWrite(resetLedPin, HIGH);
 			// TODO: notify in the display update is occuring.
 			system("npm run update");
 		}
