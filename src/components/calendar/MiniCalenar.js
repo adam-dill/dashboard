@@ -9,14 +9,15 @@ class MiniCalendar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dates: [],
-            displayed: []
+            dates: []
         }
     }
 
     componentDidMount() {
         this.fetchData();
-        setInterval(this.filterDates.bind(this, this.state.dates), 60000);
+        setInterval(() => {
+            this.setState({dates: this.filterDates()});
+        }, 60000);
     }
 
     fetchData() {
@@ -31,8 +32,8 @@ class MiniCalendar extends React.Component {
                             label: get(value, 'name')
                         }
                     });
-                this.filterDates(dates)
-                this.setState({dates});
+                this.dates = dates;
+                this.setState({dates: this.filterDates()});
 
             })
             .catch(e => setTimeout(this.fetchData.bind(this), 1000));
@@ -54,12 +55,12 @@ class MiniCalendar extends React.Component {
         return returnValue;
     }
 
-    filterDates(dates) {
-        const displayed = dates.filter(value => {
-            const max = moment().add(1, 'M');
+    filterDates() {
+        const displayed = this.dates.filter(value => {
+            const max = moment().add(3, 'd');
             return (moment(value.date).isBetween(moment(), max));
         });
-        this.setState({displayed: this.groupDates(displayed)});
+        return this.groupDates(displayed);
     }
 
     renderGroup(group, index) {
@@ -81,7 +82,7 @@ class MiniCalendar extends React.Component {
     }
 
     render() { 
-        return this.state.displayed.map((value, index) => this.renderGroup(value, index));
+        return this.state.dates.map((value, index) => this.renderGroup(value, index));
     }
 }
  
