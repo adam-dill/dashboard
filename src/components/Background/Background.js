@@ -51,10 +51,13 @@ class Background extends React.Component {
 
     render() {
         const style = this.state.queueImage ? 'fade-in' : '';
+        const queuedImage = (this.state.queueImage)
+            ? <img src={this.state.queueImage} className={`background-image vw-100 vh-100 ${style}`} />
+            : null;
         return (
             <div className="opacity-3 vw-100 vh-100 background-image">
                 <img src={this.state.backgroundImage} className="background-image vw-100 vh-100" />
-                <img src={this.state.queueImage} className={`background-image vw-100 vh-100 ${style}`} />
+                { queuedImage }
             </div>
         );
     }
