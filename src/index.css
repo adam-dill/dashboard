@@ -12,7 +12,7 @@ body {
 }
 
 @media(min-width:576px) {
-    .container { max-width: 700px; }
+    .container { max-width: 1000px; }
 }
 
 .nocursor { cursor: none; }
