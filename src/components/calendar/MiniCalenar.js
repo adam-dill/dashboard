@@ -17,7 +17,7 @@ class MiniCalendar extends React.Component {
         this.fetchData();
         setInterval(() => {
             this.setState({dates: this.filterDates()});
-        }, 60000);
+        }, 5000);
     }
 
     fetchData() {
@@ -57,8 +57,9 @@ class MiniCalendar extends React.Component {
 
     filterDates() {
         const displayed = this.dates.filter(value => {
+            const min = moment().subtract(1, 'd');
             const max = moment().add(3, 'd');
-            return (moment(value.date).isBetween(moment(), max));
+            return (moment(value.date).isBetween(min, max));
         });
         return this.groupDates(displayed);
     }
