@@ -41,7 +41,7 @@ class MidnightTrain extends React.Component {
         fetch(`http://www.midnighttrain.adamdill.com/entries/0/10`)
             .then(response => response.json())
             .then(result => {
-                const entries = this.normalizeEntries(result.data.map(value => this.processEntry(value)));
+                const entries = result.data.map(value => this.processEntry(value));
                 this.setState({data: entries});
             })
             .catch(e => setTimeout(this.getData.bind(this), 1000));
@@ -61,30 +61,6 @@ class MidnightTrain extends React.Component {
 
     formatTime(date) {
         return date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
-    }
-
-    normalizeEntries(entries) {
-        // if the entry is less than 3 minutes from the previous entry + previous duration...
-        // combine them.
-        let returnValue = [];
-        entries.forEach(entry => {
-            const lastEntry = last(returnValue);
-            if (lastEntry) {
-                const inTolerance = moment(entry.date)
-                    .add(parseFloat(entry.duration)*60, 's')
-                    .add(TOLERANCE, 'm')
-                    .isAfter(moment(lastEntry.date));
-                if (inTolerance) {
-                    const newDuration = (moment(lastEntry.date)
-                        .add(parseFloat(lastEntry.duration)*60, 's')
-                        .diff(moment(entry.date)) / 1000 / 60).toFixed(2);
-                    returnValue.pop();
-                    entry.duration = newDuration;
-                }
-            }
-            returnValue.push(entry);
-        })
-        return returnValue;
     }
 
     formatDegree(c) {
