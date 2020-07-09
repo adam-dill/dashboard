@@ -31,8 +31,8 @@ class Trello extends React.Component {
     }
 
     render() { 
-        const items = this.state.todo.map(value => {
-            return (<div className="border-bottom py-3">{value}</div>);
+        const items = this.state.todo.map((value, index) => {
+            return (<div key={index} className="border-bottom py-3">{value}</div>);
         });
         return (
             <div className="mt-5">

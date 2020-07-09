@@ -13,8 +13,8 @@ class DigitalClock extends React.Component {
         const date = this.props.now.format('MMM Do');
         return (
             <div className="col-8 text-center">
-                <div className="display-1 lh-1 m-0">{time}</div>
-                <div className="rem-200 lh-1 m-0">{day}, {date}</div>
+                <div className="rem-1000 lh-1 m-0">{time}</div>
+                <div className="rem-300 lh-1 m-0">{day}, {date}</div>
             </div>
         );
     }

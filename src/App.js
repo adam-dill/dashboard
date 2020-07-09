@@ -24,11 +24,11 @@ class App extends React.Component {
                     <div className="row">
                         <div className="col-6">
                             <MiniCalendar />
-                            <Trello />
+                            <MidnightTrain />
                         </div>
                         <div className="col-6">
                             <Headlines />
-                            <MidnightTrain />
+                            <Trello />
                         </div>
                     </div>
                 </div>
