@@ -70,7 +70,7 @@ class WeatherStrip extends React.Component {
     render() { 
         const items = this.state.data.map((value, index) => {
             return (
-                <div key={index} className="panel col px-3 py-3 mx-1 text-center">
+                <div key={index} className="panel col px-3 py-5 mx-1 text-center">
                     <div className="text-info fw-700">{value.day.toUpperCase()}</div>
                     <div className="rem-250 my-5">{value.temp}&deg;</div>
                     <div className="rem-150">{value.label}</div>

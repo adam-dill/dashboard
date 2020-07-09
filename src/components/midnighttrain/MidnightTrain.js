@@ -83,7 +83,7 @@ class MidnightTrain extends React.Component {
             ? `${minutes} min ${format(seconds)} sec`
             : `${format(seconds)} sec`;
         return (
-            <div key={index} className={`d-flex justify-content-between border-bottom`}>
+            <div key={index} className={`d-flex justify-content-between border-bottom py-1`}>
                 <div>{entry.time}</div>
                 <small> {display}</small>
             </div>
