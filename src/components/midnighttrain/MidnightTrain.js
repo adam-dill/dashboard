@@ -72,7 +72,7 @@ class MidnightTrain extends React.Component {
         if (!lastTime || !currentTime) return false;
         
         return moment(lastTime).add(UPDATE_DELAY, 'minute')
-                .isAfter(moment(currentTime));
+                .isAfter(moment(currentTime).subtract(5, 's'));
     }
 
     renderEntry(entry, index) {
@@ -111,13 +111,13 @@ class MidnightTrain extends React.Component {
         const items = this.state.data
             .map((value, index) => this.renderEntry(value, index));
         return (
-            <>
+            <div className="mt-5">
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="title">Midnight Train</div>
                     <div>{this.renderStatus()}</div>
                 </div>
                 {items}
-            </>
+            </div>
         );
     }
 }
