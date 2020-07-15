@@ -38,10 +38,14 @@ class MidnightTrain extends React.Component {
     }
 
     getData() {
-        fetch(`http://www.midnighttrain.adamdill.com/entries/0/10`)
+        fetch(`http://www.midnighttrain.adamdill.com/entries/0/50`)
             .then(response => response.json())
             .then(result => {
-                const entries = result.data.map(value => this.processEntry(value));
+                const yesterday = moment().subtract(1, 'd').hour(12).minute(0);
+                const today = moment().hour(21).minute(0);
+                const entries = result.data
+                    .filter(value => moment(value.time).isBetween(yesterday, today))
+                    .map(value => this.processEntry(value));
                 this.setState({data: entries});
             })
             .catch(e => setTimeout(this.getData.bind(this), 1000));
