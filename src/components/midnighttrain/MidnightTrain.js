@@ -42,9 +42,8 @@ class MidnightTrain extends React.Component {
             .then(response => response.json())
             .then(result => {
                 const yesterday = moment().subtract(1, 'd').hour(12).minute(0);
-                const today = moment().hour(21).minute(0);
                 const entries = result.data
-                    .filter(value => moment(value.time).isBetween(yesterday, today))
+                    .filter(value => moment(value.time).isBetween(yesterday, moment()))
                     .map(value => this.processEntry(value));
                 this.setState({data: entries});
             })
