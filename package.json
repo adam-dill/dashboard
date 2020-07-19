@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "update": "git pull && sudo npm run build && sudo reboot"
+    "update": "git pull && npm run build && sudo reboot"
   },
   "eslintConfig": {
     "extends": "react-app"
