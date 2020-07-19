@@ -11,6 +11,7 @@ class MiniCalendar extends React.Component {
         this.state = {
             dates: []
         }
+        this.fetchData = this.fetchData.bind(this);
     }
 
     componentDidMount() {
@@ -36,7 +37,7 @@ class MiniCalendar extends React.Component {
                 this.setState({dates: this.filterDates()});
 
             })
-            .catch(e => setTimeout(this.fetchData.bind(this), 1000));
+            .catch(e => setTimeout(this.fetchData, 1000));
     }
 
     groupDates(arr) {

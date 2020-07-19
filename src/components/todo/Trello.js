@@ -14,20 +14,22 @@ class Trello extends React.Component {
         this.state = {
             todo: []
         }
+        this.fetchData = this.fetchData.bind(this);
     }
 
     componentDidMount() {
-        this.getData();
-        setInterval(this.getData.bind(this), 60000 * 60);
+        this.fetchData();
+        setInterval(this.fetchData, 60000 * 60);
     }
 
-    getData() {
+    fetchData() {
         fetch(`https://api.trello.com/1/lists/${LIST}/cards?key=${API_KEY}&token=${TOKEN}`)
             .then(response => response.json())
             .then(data => {
                 const todo = data.map(value => value.name);
                 this.setState({todo});
-            });
+            })
+            .catch(e => setTimeout(this.fetchData, 1000));;
     }
 
     render() { 

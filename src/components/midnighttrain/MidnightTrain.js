@@ -12,13 +12,14 @@ class MidnightTrain extends React.Component {
             data: [],
             status: {},
         }
+        this.fetchData = this.fetchData.bind(this);
     }
 
     componentDidMount() {
-        this.getData();
+        this.fetchData();
         this.updateStatus();
         setInterval(() => {
-            this.getData();
+            this.fetchData();
             this.updateStatus();
         }, 60000 * 10);
     }
@@ -37,7 +38,7 @@ class MidnightTrain extends React.Component {
             .catch(e => setTimeout(this.updateStatus.bind(this), 1000));
     }
 
-    getData() {
+    fetchData() {
         fetch(`http://www.midnighttrain.adamdill.com/entries/0/50`)
             .then(response => response.json())
             .then(result => {
@@ -47,7 +48,7 @@ class MidnightTrain extends React.Component {
                     .map(value => this.processEntry(value));
                 this.setState({data: entries});
             })
-            .catch(e => setTimeout(this.getData.bind(this), 1000));
+            .catch(e => setTimeout(this.fetchData, 1000));
     }
 
     processEntry(entry) {

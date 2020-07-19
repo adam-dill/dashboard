@@ -34,14 +34,15 @@ class WeatherStrip extends React.Component {
         this.state = {
             data: []
         }
+        this.fetchData = this.fetchData.bind(this);
     }
     
     componentDidMount() {
-        this.getData();
-        setInterval(this.getData.bind(this), 60000 * 60);
+        this.fetchData();
+        setInterval(this.fetchData, 60000 * 60);
     }
 
-    getData() {
+    fetchData() {
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${LAT}&lon=${LON}&
         exclude=hourly,daily&units=imperial&appid=${API_KEY}`)
             .then(response => response.json())
@@ -50,7 +51,7 @@ class WeatherStrip extends React.Component {
                     data: this.parseData(data)
                 })
             })
-            .catch(e => setTimeout(this.getData.bind(this), 1000));
+            .catch(e => setTimeout(this.fetchData, 1000));
     }
 
     parseData(data) {

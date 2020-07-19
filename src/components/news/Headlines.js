@@ -11,15 +11,15 @@ class Headlines extends React.Component {
             data: [],
             currentPosition: 0
         }
-        this.loadData = this.loadData.bind(this);
+        this.fetchData = this.fetchData.bind(this);
     }
 
     componentDidMount() {
-        this.loadData();
-        setInterval(this.loadData, 60000 * 60);
+        this.fetchData();
+        setInterval(this.fetchData, 60000 * 60);
     }
 
-    loadData() {
+    fetchData() {
         clearInterval(this.ticker);
         fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`)
             .then(response => response.json())
@@ -34,7 +34,7 @@ class Headlines extends React.Component {
                 this.setState({data: articles, currentPosition: 0});
                 this.startTicker();
             })
-            .catch(e => setTimeout(this.loadData.bind(this), 1000));
+            .catch(e => setTimeout(this.fetchData, 1000));
     }
 
     startTicker() {
