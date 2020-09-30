@@ -7,3 +7,4 @@ export { default as MidnightTrain } from './midnighttrain/MidnightTrain';
 export { default as MiniCalendar } from './calendar/MiniCalenar';
 export { default as WeatherStrip } from './weather/WeatherStrip';
 export { default as Trello } from './todo/Trello';
+export { default as Quote } from './quotes/Quote';

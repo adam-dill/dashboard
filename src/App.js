@@ -1,5 +1,5 @@
 import React from 'react';
-import { Background, DigitalClock, InternationalClock, WeatherStrip, MiniCalendar, MidnightTrain, Headlines, Trello } from './components';
+import { Background, DigitalClock, InternationalClock, WeatherStrip, MiniCalendar, MidnightTrain, Headlines, Trello, Quote } from './components';
 
 class App extends React.Component {
     constructor(props) {
@@ -23,6 +23,7 @@ class App extends React.Component {
                     </div>
                     <div className="row">
                         <div className="col-6">
+                            <Quote />
                             <MiniCalendar />
                             <MidnightTrain />
                         </div>
@@ -36,5 +37,7 @@ class App extends React.Component {
         );
     }
 }
+
+
  
 export default App;
