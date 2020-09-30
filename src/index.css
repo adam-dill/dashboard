@@ -17,6 +17,21 @@ body {
 
 .nocursor { cursor: none; }
 
+.blockquote {
+    padding: 1em 2em;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.blockquote p {
+    font-size: 2rem;
+    color: #33ccff;
+}
+
+.blockquote footer {
+    font-size: 100%;
+    color: #afafaf;
+}
+
 .breaker {
     border-left: 10px solid rgba(51, 204, 255, 1);
     padding-left: 20px;
