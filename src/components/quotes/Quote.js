@@ -12,8 +12,7 @@ class Quote extends React.Component {
 
     componentDidMount() {
         this.fetchData();
-        const hour = 1000 * 60 * 60;
-        setInterval(this.fetchData, hour);
+        setInterval(this.fetchData, 3600000);
     }
 
     fetchData() {

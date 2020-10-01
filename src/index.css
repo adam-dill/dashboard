@@ -23,13 +23,11 @@ body {
 }
 
 .blockquote p {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    line-height: 1.5rem;
     color: #33ccff;
 }
 
 .blockquote footer {
-    font-size: 100%;
     color: #afafaf;
     line-height: 3rem;
 }
