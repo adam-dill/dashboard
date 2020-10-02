@@ -12,7 +12,7 @@ class Quote extends React.Component {
 
     componentDidMount() {
         this.fetchData();
-        setInterval(this.fetchData, 3600000);
+        setInterval(()=>this.fetchData(), 3600000);
     }
 
     fetchData() {
