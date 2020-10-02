@@ -39,7 +39,7 @@ class Quote extends React.Component {
             ? <em>loading quote...</em> 
             : this.renderQuote();
         return ( 
-            <div className="mt-5">
+            <div className="mt-5 quote-container">
                 {display}
             </div>
          );
