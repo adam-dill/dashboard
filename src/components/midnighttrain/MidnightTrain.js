@@ -48,7 +48,10 @@ class MidnightTrain extends React.Component {
                     .map(value => this.processEntry(value));
                 this.setState({data: entries});
             })
-            .catch(e => setTimeout(this.fetchData, 1000));
+            .catch(e => {
+                this.setState({lastUpdate: 0});
+                setTimeout(this.fetchData, 1000)
+            });
     }
 
     processEntry(entry) {
