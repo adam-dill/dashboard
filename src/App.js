@@ -24,8 +24,8 @@ class App extends React.Component {
                     <div className="row">
                         <div className="col-6">
                             <Quote />
-                            <MiniCalendar />
                             <MidnightTrain />
+                            <MiniCalendar />
                         </div>
                         <div className="col-6">
                             <Headlines />
