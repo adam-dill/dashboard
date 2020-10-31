@@ -27,9 +27,9 @@ class Quote extends React.Component {
     }
     renderQuote() {
         return (
-            <blockquote class="blockquote">
-                <p class="mb-0">{this.state.quote}</p>
-                <footer class="blockquote-footer">{this.state.author}</footer>
+            <blockquote className="blockquote pb-1">
+                <p className="mb-0">{this.state.quote}</p>
+                <footer className="blockquote-footer">{this.state.author}</footer>
             </blockquote>
         )
     }

@@ -119,7 +119,7 @@ class MidnightTrain extends React.Component {
             .map((value, index) => this.renderEntry(value, index));
         const display = items.length ? items : <i>No trains detected.</i>
         return (
-            <div className="mt-5">
+            <div className="my-5">
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="title">Midnight Train</div>
                     <div>{this.renderStatus()}</div>
