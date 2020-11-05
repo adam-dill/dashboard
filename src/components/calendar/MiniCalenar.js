@@ -69,9 +69,14 @@ class MiniCalendar extends React.Component {
         if (!group || !group.length) {
             return null;
         }
+        const date = moment(get(group, '0.date'));
+        const dateDisplay = 
+              date.isSame(moment(), 'day') ? 'TODAY'
+            : date.isSame(moment().add(1, 'd'), 'day') ? 'TOMORROW'
+            : date.formate('ddd, MMM Do');
         return (
             <div key={`group-${index}`} className="mb-3 breaker">
-                <div className="title">{moment(get(group, '0.date')).format('ddd, MMM Do')}</div>
+                <div className="title">{dateDisplay}</div>
                 {group.map((value, i) => {
                     return (
                         <div key={`label-${index}-${i}`} className="d-flex py-2 justify-content-between">
