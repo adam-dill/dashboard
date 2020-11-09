@@ -34,12 +34,12 @@ class Trello extends React.Component {
 
     render() { 
         const items = this.state.todo.map((value, index) => {
-            return (<div key={index} className="py-3">{value}</div>);
+            return (<li key={index}>{value}</li>);
         });
         return (
             <div className="mt-5">
                 <div className="title">To-Do</div>
-                {items}
+                <ul className="todo-list">{items}</ul>
             </div>
         );
     }
