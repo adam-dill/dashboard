@@ -64,10 +64,6 @@ body {
     z-index: -1;
 }
 
-.panel.first {
-    border: 4px solid rgba(51, 204, 255, 0.8);
-}
-
 .title {
     font-size: 2rem;
     font-weight: 700;
