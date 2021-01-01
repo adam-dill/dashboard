@@ -1,9 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-import last from 'lodash-es/last';
+import get from 'lodash-es/get';
+import { lte } from 'lodash-es';
 
 const UPDATE_DELAY = 1;
-const TOLERANCE = 5;
 
 class MidnightTrain extends React.Component {
     constructor(props) {
@@ -114,12 +114,39 @@ class MidnightTrain extends React.Component {
         )
     }
 
+    renderDHT() {
+        //const {timestamp, temperature, humidity} = JSON.parse(get(this.state, 'status.dht', {}));
+        let dht = get(this.state, 'status.dht', {});
+        try {
+            dht = JSON.parse(dht);
+        } catch (err) {
+            // fail silently
+        }
+        const {timestamp, temperature, humidity} = dht;
+        const now = moment();
+        const then = moment(timestamp);
+        const delta = moment(now.diff(then)).get('minute');
+        const deltaDisplay = delta > 60
+            ? "over an hour ago"
+            : delta < 1 ? "less than a minute ago"
+            : `${delta} minutes ago`
+        const celToF = (c) => (c * 9/5) + 32;
+
+        return (
+            <div className="mb-4">
+                <i>updated {deltaDisplay}</i>
+                <h2>{Math.floor(celToF(temperature))}&deg;F / {humidity}%</h2>
+            </div>
+        );
+    }
+
     render() {
         const items = this.state.data
             .map((value, index) => this.renderEntry(value, index));
         const display = items.length ? items : <i>No trains detected.</i>
         return (
             <div className="my-5">
+                {this.renderDHT()}
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="title">Midnight Train</div>
                     <div>{this.renderStatus()}</div>
