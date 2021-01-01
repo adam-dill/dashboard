@@ -125,16 +125,20 @@ class MidnightTrain extends React.Component {
         const {timestamp, temperature, humidity} = dht;
         const now = moment();
         const then = moment(timestamp);
-        const delta = moment(now.diff(then));
-        const deltaDisplay = delta.get('hour') > 1
+
+        const duration = moment.duration(now.diff(then));
+        const hours = parseInt(duration.asHours());
+        const minutes = parseInt(duration.asMinutes())%60;
+        
+        const display = hours >= 1
             ? "over an hour ago"
-            : delta.get('minute') < 1 ? "less than a minute ago"
-            : `${delta.get('minute')} minutes ago`
+            : minutes < 1 ? "less than a minute ago"
+            : `${minutes} minutes ago`
         const celToF = (c) => (c * 9/5) + 32;
 
         return (
             <div className="mb-4">
-                <i>updated {deltaDisplay}</i>
+                <i>updated {display}</i>
                 <h2>{Math.floor(celToF(temperature))}&deg;F / {humidity}%</h2>
             </div>
         );
