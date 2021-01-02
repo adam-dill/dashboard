@@ -1,16 +1,15 @@
 import React from 'react';
 import moment from 'moment';
 import get from 'lodash-es/get';
-import { lte } from 'lodash-es';
 
 const UPDATE_DELAY = 1;
-
 class MidnightTrain extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             data: [],
             status: {},
+            lastUpdateDisplay: ''
         }
         this.fetchData = this.fetchData.bind(this);
     }
@@ -18,10 +17,14 @@ class MidnightTrain extends React.Component {
     componentDidMount() {
         this.fetchData();
         this.updateStatus();
+        this.updateLastUpdate();
         setInterval(() => {
             this.fetchData();
             this.updateStatus();
         }, 60000 * 10);
+        setInterval(() => {
+            this.updateLastUpdate();
+        }, 60000);
     }
 
     updateStatus() {
@@ -115,14 +118,35 @@ class MidnightTrain extends React.Component {
     }
 
     renderDHT() {
-        //const {timestamp, temperature, humidity} = JSON.parse(get(this.state, 'status.dht', {}));
         let dht = get(this.state, 'status.dht', {});
         try {
             dht = JSON.parse(dht);
         } catch (err) {
             // fail silently
         }
-        const {timestamp, temperature, humidity} = dht;
+        const {temperature, humidity} = dht;
+        const celToF = (c) => (c * 9/5) + 32;
+        return (
+            <div className="mb-4">
+                <i>updated {this.state.lastUpdateDisplay} ago</i>
+                <h2>{Math.floor(celToF(temperature))}&deg;F / {humidity}%</h2>
+            </div>
+        );
+    }
+
+    updateLastUpdate() {
+        const lastUpdateDisplay = this.getDisplayString();
+        this.setState({lastUpdateDisplay})
+    }
+
+    getDisplayString(dht) {
+        if (!dht) {
+            dht = get(this.state, 'status.dht', {});
+            try {
+                dht = JSON.parse(dht);
+            } catch (err) {/* fail silently*/}
+        }
+        const {timestamp} = dht;
         const now = moment();
         const then = moment(timestamp);
 
@@ -130,18 +154,10 @@ class MidnightTrain extends React.Component {
         const hours = parseInt(duration.asHours());
         const minutes = parseInt(duration.asMinutes())%60;
         
-        const display = hours >= 1
-            ? "over an hour ago"
-            : minutes < 1 ? "less than a minute ago"
-            : `${minutes} minutes ago`
-        const celToF = (c) => (c * 9/5) + 32;
-
-        return (
-            <div className="mb-4">
-                <i>updated {display}</i>
-                <h2>{Math.floor(celToF(temperature))}&deg;F / {humidity}%</h2>
-            </div>
-        );
+        return hours >= 1
+            ? "over an hour"
+            : minutes < 1 ? "less than a minute"
+            : `${minutes} minutes`
     }
 
     render() {
