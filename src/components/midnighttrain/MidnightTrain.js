@@ -3,6 +3,7 @@ import moment from 'moment';
 import get from 'lodash-es/get';
 
 const UPDATE_DELAY = 1;
+const TOLERANCE = 5;
 class MidnightTrain extends React.Component {
     constructor(props) {
         super(props);
@@ -49,7 +50,7 @@ class MidnightTrain extends React.Component {
                 const entries = result.data
                     .filter(value => moment(value.time).isBetween(yesterday, moment()))
                     .map(value => this.processEntry(value));
-                this.setState({data: entries});
+                this.setState({data: this.reduceEntries(entries)});
             })
             .catch(e => {
                 this.setState({lastUpdate: 0});
@@ -65,8 +66,38 @@ class MidnightTrain extends React.Component {
             date,
             day,
             time,
-            duration: ((entry.duration/1000)/60)
+            rawTime: entry.time,
+            duration: ((entry.duration/1000)/60),
+            rawDuration: entry.duration,
         }
+    }
+
+    reduceEntries(entries) {
+        if (!entries && !entries.length) {
+            return [];
+        }
+        let returnValue = [];
+        entries.reverse().forEach((value, index, arr) => {
+            if (returnValue.length === 0) {
+                returnValue.push(value);
+                return;
+            }
+            const lastEntry = returnValue[returnValue.length - 1];
+            const lastTime = moment(lastEntry.rawTime).add(lastEntry.rawDuration, 'ms');
+            const nextTime = moment(value.rawTime);
+            if (nextTime.isBefore(lastTime.add(TOLERANCE, 'm'))) {
+                // this is the same train, so continue on the duration
+                const a = moment(lastEntry.rawTime);
+                const b = moment(value.rawTime);
+                const delta = b.diff(a, 'ms');
+                lastEntry.rawDuration = delta + parseInt(value.rawDuration);
+                lastEntry.duration = ((lastEntry.rawDuration/1000)/60);
+                return;
+            } else {
+                returnValue.push(value);
+            }
+        });
+        return returnValue.reverse();
     }
 
     formatTime(date) {
