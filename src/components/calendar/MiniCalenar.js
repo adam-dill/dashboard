@@ -30,9 +30,19 @@ class MiniCalendar extends React.Component {
                     .map(value => {
                         return {
                             date: get(value, 'date.iso'),
-                            label: get(value, 'name')
+                            label: get(value, 'name', 'N/A').trim()
                         }
+                    })
+                    .filter((value, index, arr) => {
+                        let indicies = [];
+                        arr.forEach((test, index) => {
+                            if (value.date === test.date && value.label === test.label) {
+                                indicies.push(index);
+                            }
+                        });
+                        return index === indicies[0] ? true : false;
                     });
+
                 this.dates = dates;
                 this.setState({dates: this.filterDates()});
 
@@ -57,11 +67,12 @@ class MiniCalendar extends React.Component {
     }
 
     filterDates() {
-        const displayed = this.dates.filter(value => {
-            const min = moment().subtract(1, 'd');
-            const max = moment().add(3, 'd');
-            return (moment(value.date).isBetween(min, max));
-        });
+        const displayed = this.dates
+            .filter(value => {
+                const min = moment().subtract(1, 'd');
+                const max = moment().add(3, 'd');
+                return (moment(value.date).isBetween(min, max));
+            });
         return this.groupDates(displayed);
     }
 
