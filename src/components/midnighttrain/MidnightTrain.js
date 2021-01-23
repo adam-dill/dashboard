@@ -10,7 +10,7 @@ class MidnightTrain extends React.Component {
         this.state = {
             data: [],
             status: {},
-            lastUpdateDisplay: ''
+            lastUpdateDisplay: undefined
         }
         this.fetchData = this.fetchData.bind(this);
     }
@@ -157,10 +157,16 @@ class MidnightTrain extends React.Component {
         }
         const {temperature, humidity} = dht;
         const celToF = (c) => (c * 9/5) + 32;
+        const display = this.state.lastUpdateDisplay
+            ? (<i>updated {this.state.lastUpdateDisplay} ago</i>)
+            : (<i className="text-warning">sensor appears down</i>);
+        const style = this.state.lastUpdateDisplay
+            ? ''
+            : 'opacity-5'
         return (
             <div className="mb-4">
-                <i>updated {this.state.lastUpdateDisplay} ago</i>
-                <h2>{Math.floor(celToF(temperature))}&deg;F / {humidity}%</h2>
+                {display}
+                <h2 className={style}>{Math.floor(celToF(temperature))}&deg;F / {humidity}%</h2>
             </div>
         );
     }
@@ -185,8 +191,9 @@ class MidnightTrain extends React.Component {
         const hours = parseInt(duration.asHours());
         const minutes = parseInt(duration.asMinutes())%60;
         
-        return hours >= 1
-            ? "over an hour"
+        return hours >= 2
+            ? undefined
+            : hours >= 1 ? "over an hour"
             : minutes < 1 ? "less than a minute"
             : `${minutes} minutes`
     }
