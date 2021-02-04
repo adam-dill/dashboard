@@ -29,7 +29,7 @@ class MidnightTrain extends React.Component {
     }
 
     updateStatus() {
-        fetch('http://www.midnighttrain.adamdill.com/status/')
+        fetch('http://midnighttrain.adamdill.com/status/')
             .then(response => response.json())
             .then(result => {
                 const {data} = result;
@@ -43,7 +43,7 @@ class MidnightTrain extends React.Component {
     }
 
     fetchData() {
-        fetch(`http://www.midnighttrain.adamdill.com/entries/0/50`)
+        fetch(`http://midnighttrain.adamdill.com/entries/0/50`)
             .then(response => response.json())
             .then(result => {
                 const yesterday = moment().subtract(1, 'd').hour(12).minute(0);
