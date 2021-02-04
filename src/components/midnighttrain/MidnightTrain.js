@@ -46,11 +46,16 @@ class MidnightTrain extends React.Component {
         fetch(`http://midnighttrain.adamdill.com/entries/0/50`)
             .then(response => response.json())
             .then(result => {
-                const yesterday = moment().subtract(1, 'd').hour(12).minute(0);
+                const yesterday = moment().subtract(1, 'd');
                 const entries = result.data
-                    .filter(value => moment(value.time).isBetween(yesterday, moment()))
+                    .filter(value => {
+                        const d = moment(value.time)
+                        const now = moment().add(1, 'd'); // hack because timestamps are coming across weird
+                        const result = d.isBetween(yesterday, now)
+                        return result;
+                    })
                     .map(value => this.processEntry(value));
-                this.setState({data: this.reduceEntries(entries)});
+                this.setState({data: entries});
             })
             .catch(e => {
                 this.setState({lastUpdate: 0});
@@ -59,9 +64,9 @@ class MidnightTrain extends React.Component {
     }
 
     processEntry(entry) {
-        const date = new Date(entry.time.replace(/-/g, '/'));
-        const day = date.toDateString();
-        const time = this.formatTime(date);
+        const date = moment(entry.time).utcOffset(-8);
+        const day = date.format("ddd, MMMM Do");
+        const time = date.format("h:mm a");
         return {
             date,
             day,
@@ -72,33 +77,6 @@ class MidnightTrain extends React.Component {
         }
     }
 
-    reduceEntries(entries) {
-        if (!entries && !entries.length) {
-            return [];
-        }
-        let returnValue = [];
-        entries.reverse().forEach((value, index, arr) => {
-            if (returnValue.length === 0) {
-                returnValue.push(value);
-                return;
-            }
-            const lastEntry = returnValue[returnValue.length - 1];
-            const lastTime = moment(lastEntry.rawTime).add(lastEntry.rawDuration, 'ms');
-            const nextTime = moment(value.rawTime);
-            if (nextTime.isBefore(lastTime.add(TOLERANCE, 'm'))) {
-                // this is the same train, so continue on the duration
-                const a = moment(lastEntry.rawTime);
-                const b = moment(value.rawTime);
-                const delta = b.diff(a, 'ms');
-                lastEntry.rawDuration = delta + parseInt(value.rawDuration);
-                lastEntry.duration = ((lastEntry.rawDuration/1000)/60);
-                return;
-            } else {
-                returnValue.push(value);
-            }
-        });
-        return returnValue.reverse();
-    }
 
     formatTime(date) {
         return date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
