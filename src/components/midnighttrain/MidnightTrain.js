@@ -39,11 +39,11 @@ class MidnightTrain extends React.Component {
                     this.setState({status: newStatus});
                 }
             })
-            .catch(e => setTimeout(this.updateStatus.bind(this), 1000));
+            .catch(e => setTimeout(this.updateStatus.bind(this), 10000));
     }
 
     fetchData() {
-        fetch(`http://midnighttrain.adamdill.com/today`)
+        fetch(`http://midnighttrain.adamdill.com/entries/today`)
             .then(response => response.json())
             .then(result => {
                 const yesterday = moment().subtract(1, 'd');
@@ -53,7 +53,7 @@ class MidnightTrain extends React.Component {
             })
             .catch(e => {
                 this.setState({lastUpdate: 0});
-                setTimeout(this.fetchData, 1000)
+                setTimeout(this.fetchData, 10000)
             });
     }
 
