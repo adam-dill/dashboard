@@ -43,17 +43,11 @@ class MidnightTrain extends React.Component {
     }
 
     fetchData() {
-        fetch(`http://midnighttrain.adamdill.com/entries/0/50`)
+        fetch(`http://midnighttrain.adamdill.com/today`)
             .then(response => response.json())
             .then(result => {
                 const yesterday = moment().subtract(1, 'd');
                 const entries = result.data
-                    .filter(value => {
-                        const d = moment(value.time)
-                        const now = moment().add(1, 'd'); // hack because timestamps are coming across weird
-                        const result = d.isBetween(yesterday, now)
-                        return result;
-                    })
                     .map(value => this.processEntry(value));
                 this.setState({data: entries});
             })
