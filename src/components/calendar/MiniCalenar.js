@@ -3,8 +3,6 @@ import get from 'lodash-es/get';
 import last from 'lodash-es/last';
 import moment from 'moment';
 
-const API_KEY = "e3f0a60dbc2a097d7ef955e3c483db9c4eabcb4c";
-
 class MiniCalendar extends React.Component {
     constructor(props) {
         super(props);
@@ -23,7 +21,7 @@ class MiniCalendar extends React.Component {
 
     fetchData() {
         const year = moment().year();
-        fetch(`https://calendarific.com/api/v2/holidays?&api_key=${API_KEY}&country=US&year=${year}`)
+        fetch(`https://calendarific.com/api/v2/holidays?&api_key=${this.props.api}&country=US&year=${year}`)
             .then(response => response.json())
             .then(data => {
                 const dates = get(data, 'response.holidays', [])

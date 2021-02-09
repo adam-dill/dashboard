@@ -1,7 +1,6 @@
 import React from 'react';
 import get from 'lodash-es/get';
 
-const API_KEY = "f0665623f70548829d60df1c146c715c";
 const MAX_VIEW = 5;
 
 class Headlines extends React.Component {
@@ -21,7 +20,7 @@ class Headlines extends React.Component {
 
     fetchData() {
         clearInterval(this.ticker);
-        fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`)
+        fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${this.props.api}`)
             .then(response => response.json())
             .then(data => {
                 const articles = get(data, 'articles', [])

@@ -10,9 +10,6 @@ import Day7 from '../../assets/images/weather/day-7.png';
 import Day8 from '../../assets/images/weather/day-8.png';
 import Day9 from '../../assets/images/weather/day-9.png';
 
-// https://openweathermap.org/api/one-call-api
-const API_KEY = "220bb8d4c31c356359f76bfe6f628169";
-
 const LAT = 43.0389025;
 const LON = -87.9064736;
 
@@ -44,7 +41,7 @@ class WeatherStrip extends React.Component {
 
     fetchData() {
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${LAT}&lon=${LON}&
-        exclude=hourly,daily&units=imperial&appid=${API_KEY}`)
+        exclude=hourly,daily&units=imperial&appid=${this.props.api}`)
             .then(response => response.json())
             .then(data => {
                 this.setState({
