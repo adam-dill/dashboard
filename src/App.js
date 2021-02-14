@@ -1,5 +1,5 @@
 import React from 'react';
-import { Background, DigitalClock, InternationalClock, WeatherStrip, MiniCalendar, MidnightTrain, Headlines, Trello, Quote } from './components';
+import { Background, DigitalClock, InternationalClock, WeatherStrip, MiniCalendar, MidnightTrain, Headlines, Trello, Trends, Quote } from './components';
 import {Keys} from './API';
 
 class App extends React.Component {
@@ -31,6 +31,7 @@ class App extends React.Component {
                         <div className="col-6">
                             <Headlines api={Keys.NEWS} />
                             <Trello api={Keys.TRELLO} />
+                            <Trends />
                         </div>
                     </div>
                 </div>
