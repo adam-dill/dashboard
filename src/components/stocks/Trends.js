@@ -31,7 +31,6 @@ const options = {
 
 const colorNames = [
     "rgb(255, 0, 255)",
-    "rgb(240, 230, 140)",
     "rgb(124, 252, 0)",
     "rgb(70, 130, 180)",
 ];
@@ -63,14 +62,15 @@ class Trends extends React.Component {
                 const tickers = Object.keys(resultData.scores);
                 // assume all data is structured consistently.
                 const trackingKeys = Object.keys(resultData.scores[tickers[0]]);
-                const datasets = trackingKeys.map((key, index) => {
-                    
-                    return {
-                        label: key,
-                        data: tickers.map(ticker => resultData.scores[ticker][key]),
-                        backgroundColor: colorNames[index]
-                    }
-                })
+                const datasets = trackingKeys
+                    .filter(key => key !== 'neu')
+                    .map((key, index) => {
+                        return {
+                            label: key,
+                            data: tickers.map(ticker => resultData.scores[ticker][key]),
+                            backgroundColor: colorNames[index]
+                        }
+                    });
                 this.setState({data: { labels: tickers, datasets }});
             });
     }
