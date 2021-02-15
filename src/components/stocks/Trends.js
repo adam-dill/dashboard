@@ -48,7 +48,7 @@ class Trends extends React.Component {
         setInterval(() => {
             // update at 1am, to give the data time to be set.
             const date = new Date();
-            if (date.getHours === 1) {
+            if (date.getHours() === 1) {
                 this.fetchData();
             }
         }, (1000 * 60 * 60));
