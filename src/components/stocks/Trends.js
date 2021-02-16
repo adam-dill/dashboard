@@ -39,7 +39,8 @@ class Trends extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: {}
+            data: {},
+            stamp: undefined
         };
     }
 
@@ -52,6 +53,9 @@ class Trends extends React.Component {
                 this.fetchData();
             }
         }, (1000 * 60 * 60));
+        setInterval(() => {
+            this.setState({stamp: new Date()});
+        }, (1000 * 60 * 15));
     }
 
     fetchData() {
