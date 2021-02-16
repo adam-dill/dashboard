@@ -72,7 +72,8 @@ class Trends extends React.Component {
                         }
                     });
                 this.setState({data: { labels: tickers, datasets }});
-            });
+            })
+            .catch(e => setTimeout(this.fetchData, 1000));;
     }
 
     render() {
