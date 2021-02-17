@@ -50,8 +50,6 @@ class Trends extends React.Component {
             const date = new Date();
             if (date.getHours() === 1) {
                 this.fetchData();
-            } else {
-                this.setState({data: JSON.parse(JSON.stringify(this.state.data))});
             }
         }, (1000 * 60 * 60));
     }
@@ -82,7 +80,7 @@ class Trends extends React.Component {
         return (
             <div className="my-5">
                 <div className="title">Reddit Trends</div>
-                <Bar data={this.state.data} options={options} />
+                <Bar redraw={true} data={this.state.data} options={options} />
             </div>
         );
     }
