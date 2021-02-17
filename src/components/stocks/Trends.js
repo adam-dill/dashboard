@@ -39,8 +39,7 @@ class Trends extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: {},
-            stamp: undefined
+            data: {}
         };
     }
 
@@ -51,11 +50,10 @@ class Trends extends React.Component {
             const date = new Date();
             if (date.getHours() === 1) {
                 this.fetchData();
+            } else {
+                this.setState({data: JSON.parse(JSON.stringify(this.state.data))});
             }
         }, (1000 * 60 * 60));
-        setInterval(() => {
-            this.setState({stamp: new Date()});
-        }, (1000 * 60 * 15));
     }
 
     fetchData() {
@@ -83,6 +81,7 @@ class Trends extends React.Component {
     render() {
         return (
             <div className="my-5">
+                <div className="title">Reddit Trends</div>
                 <Bar data={this.state.data} options={options} />
             </div>
         );
