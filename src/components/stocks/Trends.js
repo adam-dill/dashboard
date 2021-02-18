@@ -82,7 +82,7 @@ class Trends extends React.Component {
     }
 
     handleRedraw() {
-        setTimeout(handleRedraw, () => this.setState({draw: true}), 100)
+        setTimeout(() => this.setState({draw: true}), 100)
     }
 
     render() {
