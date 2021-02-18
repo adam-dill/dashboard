@@ -39,8 +39,10 @@ class Trends extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: {}
+            data: {},
+            draw: true
         };
+        this.handleRedraw = this.handleRedraw.bind(this);
     }
 
     componentDidMount() {
@@ -71,16 +73,29 @@ class Trends extends React.Component {
                             backgroundColor: colorNames[index]
                         }
                     });
-                this.setState({data: { labels: tickers, datasets }});
+                this.setState({
+                    data: { labels: tickers, datasets },
+                    redraw: false
+                });
             })
             .catch(e => setTimeout(this.fetchData, 1000));;
     }
 
+    handleRedraw() {
+        setTimeout(handleRedraw, () => this.setState({draw: true}), 100)
+    }
+
     render() {
+        const compoent = (this.state.draw)
+            ? <Bar redraw={true} data={this.state.data} options={options} />
+            : null;
+        if (this.state.draw === false) {
+            this.handleRedraw();
+        }
         return (
             <div className="my-5">
                 <div className="title">Reddit Trends</div>
-                <Bar redraw={true} data={this.state.data} options={options} />
+                {compoent}
             </div>
         );
     }
