@@ -65,6 +65,9 @@ class MiniCalendar extends React.Component {
     }
 
     filterDates() {
+        if (!this.dates) {
+            return [];
+        }
         const displayed = this.dates
             .filter(value => {
                 const min = moment().subtract(1, 'd');
