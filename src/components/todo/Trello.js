@@ -30,8 +30,10 @@ class Trello extends React.Component {
         const items = this.state.todo.map((value, index) => {
             return (<li key={index}>{value}</li>);
         });
+        if (items.length === 0) { return null }
+
         return (
-            <div className="mt-5">
+            <div className="mb-5">
                 <div className="title">To-Do</div>
                 <ul className="todo-list">{items}</ul>
             </div>

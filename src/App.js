@@ -29,8 +29,8 @@ class App extends React.Component {
                             <MiniCalendar api={Keys.CALENDAR} />
                         </div>
                         <div className="col-6">
-                            <Headlines api={Keys.NEWS} />
                             <Trello api={Keys.TRELLO} />
+                            <Headlines api={Keys.NEWS} />
                             <Trends />
                         </div>
                     </div>
