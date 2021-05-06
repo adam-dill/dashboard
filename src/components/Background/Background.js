@@ -11,13 +11,14 @@ class Background extends React.Component {
         this.state = {
             currentIndex: 0,
             backgrounds: [],
+            outbound: undefined,
         }
     }
 
     componentDidMount() {
         setInterval(() => {
             this.setState((prev) => {
-                return {currentIndex: prev.currentIndex + 1}
+                return {currentIndex: prev.currentIndex + 1, outbound: true}
             })
         }, DELAY);
         setInterval(() => this.hardReset(), 60000*30);
@@ -36,6 +37,11 @@ class Background extends React.Component {
 
     currentImage = () => {
         const index = this.state.currentIndex % this.state.backgrounds.length;
+        return this.state.backgrounds[index];
+    }
+
+    previousImage = () => {
+        const index = (this.state.currentIndex-1) % this.state.backgrounds.length;
         return this.state.backgrounds[index];
     }
 
@@ -60,9 +66,13 @@ class Background extends React.Component {
     }
 
     render() {
+        if (this.state.outbound) {
+            setTimeout(() => this.setState({outbound: false}), (1000*4)-10);
+        }
         return (
             <div className="opacity-3 vw-100 vh-100 background-image">
                 <img src={this.currentImage()} className="background-image vw-100 vh-100" />
+                {this.state.outbound && <img src={this.previousImage()} className="background-image vw-100 vh-100 fade-out" />}
             </div>
         );
     }
