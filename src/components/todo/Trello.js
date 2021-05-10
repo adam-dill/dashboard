@@ -16,7 +16,6 @@ class Trello extends React.Component {
     }
 
     fetchData() {
-        debugger;
         fetch(`https://api.trello.com/1/lists/${this.props.api.LIST}/cards?key=${this.props.api.API_KEY}&token=${this.props.api.TOKEN}`)
             .then(response => response.json())
             .then(data => {

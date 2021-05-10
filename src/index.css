@@ -118,14 +118,16 @@ overflow-hidden { overflow: hidden; }
 }
 
 .todo-list {
-    margin:0 0 0 20px;
+    margin:0 0 0 35px;
     padding:0;
 }
 .todo-list>li {
     list-style: none;
 }
 .todo-list>li::before {
-    content: '\1F4A0'; margin-left: -20px; margin-right: 10px;
+    content: '\1F4A0';
+    margin-left: -35px;
+    margin-right: 10px;
 }
 
 @keyframes fadein {
