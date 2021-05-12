@@ -25,11 +25,11 @@ class App extends React.Component {
                     <div className="row">
                         <div className="col-6">
                             <Quote />
+                            <Trello api={Keys.TRELLO} />
                             <MidnightTrain />
                             <MiniCalendar api={Keys.CALENDAR} />
                         </div>
                         <div className="col-6">
-                            <Trello api={Keys.TRELLO} />
                             <Headlines api={Keys.NEWS} />
                             <Trends />
                         </div>
