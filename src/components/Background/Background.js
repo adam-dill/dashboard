@@ -16,23 +16,23 @@ class Background extends React.Component {
     }
 
     componentDidMount() {
+        // updating the image index
         setInterval(() => {
             this.setState((prev) => {
                 return {currentIndex: prev.currentIndex + 1, outbound: true}
             })
         }, DELAY);
-        setInterval(() => this.hardReset(), 60000*30);
+        setInterval(() => this.fetchData(), 60000*30);
+        this.fetchData();
+    }
+
+    fetchData() {
         fetch(ENDPOINT)
             .then(response => response.json())
             .then(data => {
                 const backgrounds = this.shuffle(data.map(value => value.image_large));
-                this.setState({backgrounds});
+                this.setState({backgrounds, currentIndex: 0});
             });
-    }
-
-    hardReset = () => {
-        const backgrounds = this.shuffle(this.state.backgrounds);
-        this.setState({currentIndex: 0, backgrounds});
     }
 
     currentImage = () => {
