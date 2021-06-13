@@ -25,15 +25,18 @@ class Headlines extends React.Component {
             .then(data => {
                 const articles = get(data, 'articles', [])
                     .map((value, index) => {
-                        return {
-                            key: index,
-                            title: get(value, 'title'),
-                        }
+                        const v = get(value, 'title');
+                        const cutPoint = v.lastIndexOf(' - ');
+                        const source = v.substr(cutPoint);
+                        const title = v.substr(0, cutPoint);
+                        
+                        return { key: index, title, source }
                     });
                 this.setState({data: articles, currentPosition: 0});
                 this.startTicker();
             })
             .catch(e => setTimeout(this.fetchData, 1000));
+
     }
 
     startTicker() {
@@ -54,7 +57,7 @@ class Headlines extends React.Component {
         const items = selectedItems
             .map(value => {
                 return (
-                    <div key={value.key} className="list-group-item fw-500 fade-in">{value.title}</div>
+                    <div key={value.key} className="list-group-item fw-500 fade-in blur-bg">{value.title}<br /><span className="teal">{value.source}</span></div>
                 );
             });
         return (
