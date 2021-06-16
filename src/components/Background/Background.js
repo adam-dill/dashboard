@@ -27,7 +27,8 @@ class Background extends React.Component {
     }
 
     fetchData() {
-        fetch(ENDPOINT)
+        const cacheBuster = `&buster=${Math.floor(Math.random() * 100000)}`
+        fetch(`${ENDPOINT}${cacheBuster}`)
             .then(response => response.json())
             .then(data => {
                 const backgrounds = this.shuffle(data.map(value => value.image_large));

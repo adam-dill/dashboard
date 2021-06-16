@@ -130,7 +130,7 @@ overflow-hidden { overflow: hidden; }
     margin-right: 10px;
 }
 
-.blur-bg { backdrop-filter: blur(15px); }
+.blur-bg { backdrop-filter: blur(10px); }
 
 .teal { color: #33ccff; }
 
