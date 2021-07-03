@@ -2,7 +2,7 @@ import React from 'react';
 
 const DELAY = 60000 * 1;
 
-const HOST = 'https://cityscape.adamdill.com';
+const HOST = 'https://wall.adamdill.com';
 const ENDPOINT = `${HOST}/api/images?key=WNPW298-6W7M95X-JGA8XQR-XERQ9V8&group=1`;
 
 class Background extends React.Component {
