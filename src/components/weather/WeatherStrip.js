@@ -10,9 +10,6 @@ import Day7 from '../../assets/images/weather/day-7.png';
 import Day8 from '../../assets/images/weather/day-8.png';
 import Day9 from '../../assets/images/weather/day-9.png';
 
-const LAT = 43.0389025;
-const LON = -87.9064736;
-
 const ICON = {
     '01d': Day1,
     '02d': Day2,
@@ -29,18 +26,31 @@ class WeatherStrip extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            data: [],
+            latitude: undefined,
+            longitude: undefined
         }
         this.fetchData = this.fetchData.bind(this);
     }
     
     componentDidMount() {
-        this.fetchData();
+        
+        window.navigator.geolocation
+                .getCurrentPosition(({coords}) => {
+                    const {latitude, longitude} = coords;
+                    this.setState({
+                        latitude,
+                        longitude
+                    }, this.fetchData);
+                }, console.error);
         setInterval(this.fetchData, 60000 * 60);
     }
 
     fetchData() {
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${LAT}&lon=${LON}&
+        if (!this.state.latitude || !this.state.longitude) {
+            return;
+        }
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.state.latitude}&lon=${this.state.longitude}&
         exclude=hourly,daily&units=imperial&appid=${this.props.api}`)
             .then(response => response.json())
             .then(data => {
