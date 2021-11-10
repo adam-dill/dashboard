@@ -1,6 +1,7 @@
 name: 'Nightly Merge'
 
 on:
+  workflow_dispatch:
   schedule:
     - cron:  '*/5 * * * *'
 
