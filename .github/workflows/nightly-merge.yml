@@ -3,7 +3,7 @@ name: 'Nightly Merge'
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 0 * * *'
+    - cron:  '*/10 * * * *'
 
 jobs:
   nightly-merge:
