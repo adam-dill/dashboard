@@ -27,33 +27,26 @@ class WeatherStrip extends React.Component {
         super(props);
         this.state = {
             data: [],
-            latitude: undefined,
-            longitude: undefined
+            latitude: 43.0490693,
+            longitude: -88.0059109
         }
         this.fetchData = this.fetchData.bind(this);
     }
     
     componentDidMount() {
-        
-        window.navigator.geolocation
-                .getCurrentPosition(({coords}) => {
-                    const {latitude, longitude} = coords;
-                    this.setState({
-                        latitude,
-                        longitude
-                    }, this.fetchData);
-                }, console.error);
         setInterval(this.fetchData, 60000 * 60);
+        this.fetchData();
     }
 
     fetchData() {
-        if (!this.state.latitude || !this.state.longitude) {
+        const {latitude, longitude} = this.state;
+        if (!latitude || !longitude) {
             return;
         }
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.state.latitude}&lon=${this.state.longitude}&
-        exclude=hourly,daily&units=imperial&appid=${this.props.api}`)
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,daily&units=imperial&appid=${this.props.api}`)
             .then(response => response.json())
             .then(data => {
+                console.log(data)
                 this.setState({
                     data: this.parseData(data)
                 })

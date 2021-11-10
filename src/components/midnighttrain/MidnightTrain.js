@@ -59,7 +59,7 @@ class MidnightTrain extends React.Component {
 
     processEntry(entry) {
         let date = moment(entry.time);
-        if (date.isDST() === false) { date.add(1, "h"); }
+        //if (date.isDST() === false) { date.add(1, "h"); }
         const day = date.format("ddd, MMMM Do");
         const time = date.format("h:mm a");
         return {
