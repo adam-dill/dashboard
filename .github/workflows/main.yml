@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        uses: adam-dill/dashboard@master
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          repo: dashboard
-          source-branch: SIT-Stage
-          target-branch: SIT
-          commit-message: "Automatic merge from staging."
+        - uses: adam-dill/dashboard@master
+        - with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            repo: dashboard
+            source-branch: SIT-Stage
+            target-branch: SIT
+            commit-message: "Automatic merge from staging."
