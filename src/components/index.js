@@ -9,4 +9,3 @@ export { default as Quote } from './quotes/Quote';
 export { default as Trello } from './todo/Trello';
 export { default as Trends } from './stocks/Trends';
 export { default as WeatherStrip } from './weather/WeatherStrip';
-export { default as LocationForcast } from './weather/LocationForcast';

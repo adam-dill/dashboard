@@ -43,7 +43,8 @@ class WeatherStrip extends React.Component {
         if (!latitude || !longitude) {
             return;
         }
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,daily&units=imperial&appid=${this.props.api}`)
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&
+        exclude=hourly,daily&units=imperial&appid=${this.props.api}`)
             .then(response => response.json())
             .then(data => {
                 console.log(data)
