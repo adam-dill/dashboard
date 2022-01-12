@@ -17,7 +17,7 @@ class Quote extends React.Component {
     }
 
     fetchData() {
-        fetch("https://quotes.rest/qod?language=en")
+        fetch("http://quotes.rest/qod?language=en")
             .then(response => response.json())
             .then(data => {
                 const quote = get(data, 'contents.quotes.0.quote');
