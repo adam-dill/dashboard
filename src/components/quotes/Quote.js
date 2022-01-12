@@ -24,7 +24,10 @@ class Quote extends React.Component {
                 const author = get(data, 'contents.quotes.0.author');
                 this.setState({quote, author, error: undefined});
             })
-            .catch(e => setTimeout(this.fetchData, 1000));
+            .catch(e => {
+                this.setState({error: e.message});
+                setTimeout(this.fetchData, 1000);
+            });
     }
     renderQuote() {
         return (
@@ -36,6 +39,9 @@ class Quote extends React.Component {
     }
 
     render() { 
+        if (this.state.error !== undefined)
+            return <div className='mt-5'>{this.state.error}</div>;
+        
         const display = !this.state.quote 
             ? <em>loading quote...</em> 
             : this.renderQuote();
