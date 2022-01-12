@@ -18,19 +18,21 @@ body {
 .nocursor { cursor: none; }
 
 .quote-container {
-    background-color: rgba(0, 0, 0, 0.5);
+    border: 10px solid transparent;
+    border-left: none;
+    border-right: none;
+    border-image: url(./assets/images/divider.png) 60 stretch;
 }
 
 .blockquote {
-    padding: 1em 2em;
-    background: url(./assets/images/curl.png) no-repeat;
-    background-size: contain;
-    background-position: bottom;
+    padding: 1em 0;
+    margin: 0;
 }
 
 .blockquote p {
+    font-style: italic;
     line-height: 1.5rem;
-    color: #33ccff;
+    color: white;
 }
 
 .blockquote footer {

@@ -6,7 +6,8 @@ class Quote extends React.Component {
         super(props);
         this.state = {
             quote: undefined,
-            author: undefined
+            author: undefined,
+            error: undefined
         }
     }
 
@@ -21,7 +22,7 @@ class Quote extends React.Component {
             .then(data => {
                 const quote = get(data, 'contents.quotes.0.quote');
                 const author = get(data, 'contents.quotes.0.author');
-                this.setState({quote, author});
+                this.setState({quote, author, error: undefined});
             })
             .catch(e => setTimeout(this.fetchData, 1000));
     }
