@@ -26,7 +26,6 @@ class App extends React.Component {
                         <div className="col-6">
                             <Quote />
                             <Trello api={Keys.TRELLO} />
-                            <MidnightTrain />
                             <MiniCalendar api={Keys.CALENDAR} />
                         </div>
                         <div className="col-6">
