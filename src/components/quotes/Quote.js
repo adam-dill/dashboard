@@ -40,7 +40,7 @@ class Quote extends React.Component {
 
     render() { 
         if (this.state.error !== undefined)
-            return <div className='mt-5'>{this.state.error}</div>;
+            return <div className='my-5'>{this.state.error}</div>;
         
         const display = !this.state.quote 
             ? <em>loading quote...</em> 
