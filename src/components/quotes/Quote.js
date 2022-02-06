@@ -46,7 +46,7 @@ class Quote extends React.Component {
             ? <em>loading quote...</em> 
             : this.renderQuote();
         return ( 
-            <div className="mt-5 quote-container">
+            <div className="my-5 quote-container">
                 {display}
             </div>
          );
