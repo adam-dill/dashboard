@@ -4,7 +4,7 @@
     "description": "A web based dashboard that is used as a digital bulletin board.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "npm --prefix front-end run test",
         "build": "npm --prefix front-end run build",
         "backend": "nodemon app.js",
         "start": "npm run backend & npm --prefix front-end run start",
