@@ -11,7 +11,7 @@ import Trello from './components/Trello';
 function App() {
 
     return (
-        <>
+        <>  
             <Clock />
             <News />
             <Calendar />
