@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Clock from './components/Clock';
 
 function App() {
     const [message, setMessage] = useState();
@@ -10,7 +11,12 @@ function App() {
             .catch(console.error);
     }, []);
 
-    return <div>{message}</div>;
+    return (
+        <>
+            <div>{message}</div>
+            <Clock />
+        </>
+    );
 }
 
 export default App;

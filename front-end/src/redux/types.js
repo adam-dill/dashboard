@@ -1,0 +1,1 @@
+export const UPDATE_TIME = 'update_time';
