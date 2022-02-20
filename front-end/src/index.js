@@ -7,6 +7,8 @@ import App from "./App";
 import DataCollector from "./DataCollector";
 import reportWebVitals from "./reportWebVitals";
 
+import './fonts/roboto/Roboto-Regular.ttf';
+
 const store = configureStore();
 DataCollector(store);
 

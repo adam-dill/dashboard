@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "RobotoRegular";
+    src: local("RobotoRegular"),
+     url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight: regular;
+}
+    
+body {
+    margin: 0;
+    padding: 0;
+    font-family: RobotoRegular;
+}
+
 .response {
     max-height: 75px;
     overflow: auto;
