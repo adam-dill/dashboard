@@ -4,14 +4,11 @@ import "./index.css";
 import { Provider } from 'react-redux'
 import configureStore from './redux/store';
 import App from "./App";
+import DataCollector from "./DataCollector";
 import reportWebVitals from "./reportWebVitals";
 
-import { updateTimeAction } from "./redux/actions/updateTimeAction";
-
 const store = configureStore();
-setInterval(() => {
-    store.dispatch(updateTimeAction())
-}, 1000);
+DataCollector(store);
 
 ReactDOM.render(
     <React.StrictMode>

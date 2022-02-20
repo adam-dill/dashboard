@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 
-const Clock = ({clock: {time}}) => {
+const Clock = ({time}) => {
 
     return (
         <div>
@@ -12,6 +12,7 @@ const Clock = ({clock: {time}}) => {
 
 const mapStateToProps = (state) => ({
     ...state,
+    time: state.clock.time
 });
 
 export default connect(mapStateToProps)(Clock);

@@ -1,12 +1,15 @@
-import { UPDATE_TIME } from "../types";
+import { UPDATE_TIME } from "../actions/timeAction";
 
+const initialState = {
+    time: new Date()
+};
 
-const timeReducer = (state = {time: new Date()}, action) => {
+const timeReducer = (state = initialState, action) => {
     switch (action.type) {
         case UPDATE_TIME:
             return {
                 ...state,
-                time: action.time
+                time: action.data
             };
         default:
             return {...state};

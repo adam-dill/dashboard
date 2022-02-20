@@ -1,20 +1,25 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Clock from './components/Clock';
+import Weather from './components/Weather';
+import News from './components/News';
+import Calendar from './components/Calendar';
+import Background from './components/Background';
+import Quote from './components/Quote';
+import Trends from './components/Trends';
+import Trello from './components/Trello';
 
 function App() {
-    const [message, setMessage] = useState();
-
-    useEffect(() => {
-        fetch('http://localhost:5000/api/v1/weather')
-            .then(response => response.json())
-            .then(data => setMessage(data.message))
-            .catch(console.error);
-    }, []);
 
     return (
         <>
-            <div>{message}</div>
             <Clock />
+            <News />
+            <Calendar />
+            <Weather />
+            <Background />
+            <Quote />
+            <Trello />
+            <Trends />
         </>
     );
 }

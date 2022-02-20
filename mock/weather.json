@@ -1,0 +1,361 @@
+{
+    "lat": 43.0491,
+    "lon": -88.0059,
+    "timezone": "America/Chicago",
+    "timezone_offset": -21600,
+    "current": {
+        "dt": 1645382423,
+        "sunrise": 1645360948,
+        "sunset": 1645399761,
+        "temp": 282.03,
+        "feels_like": 277.5,
+        "pressure": 1005,
+        "humidity": 52,
+        "dew_point": 272.77,
+        "uvi": 2.7,
+        "clouds": 0,
+        "visibility": 10000,
+        "wind_speed": 11.83,
+        "wind_deg": 210,
+        "wind_gust": 20.06,
+        "weather": [
+            {
+                "id": 800,
+                "main": "Clear",
+                "description": "clear sky",
+                "icon": "01d"
+            }
+        ]
+    },
+    "daily": [
+        {
+            "dt": 1645380000,
+            "sunrise": 1645360948,
+            "sunset": 1645399761,
+            "moonrise": 1645416180,
+            "moonset": 1645368480,
+            "moon_phase": 0.64,
+            "temp": {
+                "day": 281.6,
+                "min": 264.5,
+                "max": 282.03,
+                "night": 273.54,
+                "eve": 276.52,
+                "morn": 269.52
+            },
+            "feels_like": {
+                "day": 277.33,
+                "night": 270.46,
+                "eve": 273.71,
+                "morn": 262.52
+            },
+            "pressure": 1006,
+            "humidity": 54,
+            "dew_point": 272.87,
+            "wind_speed": 10.22,
+            "wind_deg": 222,
+            "wind_gust": 25.61,
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01d"
+                }
+            ],
+            "clouds": 1,
+            "pop": 0,
+            "uvi": 3.1
+        },
+        {
+            "dt": 1645466400,
+            "sunrise": 1645447257,
+            "sunset": 1645486239,
+            "moonrise": 1645506960,
+            "moonset": 1645456260,
+            "moon_phase": 0.67,
+            "temp": {
+                "day": 271.72,
+                "min": 271.72,
+                "max": 273.37,
+                "night": 271.99,
+                "eve": 272.94,
+                "morn": 272.17
+            },
+            "feels_like": {
+                "day": 265.43,
+                "night": 266.06,
+                "eve": 267.59,
+                "morn": 266.51
+            },
+            "pressure": 1020,
+            "humidity": 86,
+            "dew_point": 269.53,
+            "wind_speed": 6.93,
+            "wind_deg": 43,
+            "wind_gust": 11.59,
+            "weather": [
+                {
+                    "id": 601,
+                    "main": "Snow",
+                    "description": "snow",
+                    "icon": "13d"
+                }
+            ],
+            "clouds": 100,
+            "pop": 1,
+            "snow": 1.99,
+            "uvi": 1.37
+        },
+        {
+            "dt": 1645552800,
+            "sunrise": 1645533565,
+            "sunset": 1645572717,
+            "moonrise": 0,
+            "moonset": 1645544280,
+            "moon_phase": 0.71,
+            "temp": {
+                "day": 270.48,
+                "min": 263.72,
+                "max": 271.79,
+                "night": 263.72,
+                "eve": 264.69,
+                "morn": 270.26
+            },
+            "feels_like": {
+                "day": 264.14,
+                "night": 256.72,
+                "eve": 257.69,
+                "morn": 263.57
+            },
+            "pressure": 1010,
+            "humidity": 94,
+            "dew_point": 269.43,
+            "wind_speed": 7.31,
+            "wind_deg": 22,
+            "wind_gust": 13.37,
+            "weather": [
+                {
+                    "id": 601,
+                    "main": "Snow",
+                    "description": "snow",
+                    "icon": "13d"
+                }
+            ],
+            "clouds": 100,
+            "pop": 1,
+            "snow": 9.7,
+            "uvi": 0.75
+        },
+        {
+            "dt": 1645639200,
+            "sunrise": 1645619871,
+            "sunset": 1645659194,
+            "moonrise": 1645597860,
+            "moonset": 1645632600,
+            "moon_phase": 0.75,
+            "temp": {
+                "day": 264.1,
+                "min": 260.59,
+                "max": 265.12,
+                "night": 262.03,
+                "eve": 263.77,
+                "morn": 260.59
+            },
+            "feels_like": {
+                "day": 257.36,
+                "night": 257.59,
+                "eve": 259.48,
+                "morn": 253.59
+            },
+            "pressure": 1034,
+            "humidity": 74,
+            "dew_point": 259.68,
+            "wind_speed": 4.99,
+            "wind_deg": 317,
+            "wind_gust": 10.45,
+            "weather": [
+                {
+                    "id": 804,
+                    "main": "Clouds",
+                    "description": "overcast clouds",
+                    "icon": "04d"
+                }
+            ],
+            "clouds": 86,
+            "pop": 0,
+            "uvi": 3.05
+        },
+        {
+            "dt": 1645725600,
+            "sunrise": 1645706177,
+            "sunset": 1645745671,
+            "moonrise": 1645688820,
+            "moonset": 1645721460,
+            "moon_phase": 0.78,
+            "temp": {
+                "day": 267.23,
+                "min": 261.28,
+                "max": 267.23,
+                "night": 265.63,
+                "eve": 265.93,
+                "morn": 261.28
+            },
+            "feels_like": {
+                "day": 260.62,
+                "night": 259.19,
+                "eve": 259.29,
+                "morn": 255.23
+            },
+            "pressure": 1034,
+            "humidity": 74,
+            "dew_point": 262.99,
+            "wind_speed": 5.31,
+            "wind_deg": 69,
+            "wind_gust": 9.47,
+            "weather": [
+                {
+                    "id": 600,
+                    "main": "Snow",
+                    "description": "light snow",
+                    "icon": "13d"
+                }
+            ],
+            "clouds": 95,
+            "pop": 0.57,
+            "snow": 1.82,
+            "uvi": 3.15
+        },
+        {
+            "dt": 1645812000,
+            "sunrise": 1645792482,
+            "sunset": 1645832148,
+            "moonrise": 1645779600,
+            "moonset": 1645810920,
+            "moon_phase": 0.82,
+            "temp": {
+                "day": 266.58,
+                "min": 258.03,
+                "max": 266.58,
+                "night": 258.03,
+                "eve": 260.38,
+                "morn": 265.7
+            },
+            "feels_like": {
+                "day": 259.75,
+                "night": 252.82,
+                "eve": 256.26,
+                "morn": 259.18
+            },
+            "pressure": 1030,
+            "humidity": 80,
+            "dew_point": 263.43,
+            "wind_speed": 5.53,
+            "wind_deg": 356,
+            "wind_gust": 9.98,
+            "weather": [
+                {
+                    "id": 601,
+                    "main": "Snow",
+                    "description": "snow",
+                    "icon": "13d"
+                }
+            ],
+            "clouds": 100,
+            "pop": 1,
+            "snow": 7.03,
+            "uvi": 4
+        },
+        {
+            "dt": 1645898400,
+            "sunrise": 1645878786,
+            "sunset": 1645918624,
+            "moonrise": 1645869960,
+            "moonset": 1645901040,
+            "moon_phase": 0.85,
+            "temp": {
+                "day": 265.09,
+                "min": 254.99,
+                "max": 267.06,
+                "night": 266.58,
+                "eve": 265.7,
+                "morn": 254.99
+            },
+            "feels_like": {
+                "day": 258.09,
+                "night": 259.58,
+                "eve": 258.7,
+                "morn": 247.99
+            },
+            "pressure": 1033,
+            "humidity": 69,
+            "dew_point": 259.92,
+            "wind_speed": 6.77,
+            "wind_deg": 227,
+            "wind_gust": 17.78,
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01d"
+                }
+            ],
+            "clouds": 4,
+            "pop": 0,
+            "uvi": 4
+        },
+        {
+            "dt": 1645984800,
+            "sunrise": 1645965089,
+            "sunset": 1646005100,
+            "moonrise": 1645959720,
+            "moonset": 1645991820,
+            "moon_phase": 0.89,
+            "temp": {
+                "day": 270.51,
+                "min": 259.47,
+                "max": 270.51,
+                "night": 259.47,
+                "eve": 261.93,
+                "morn": 267.34
+            },
+            "feels_like": {
+                "day": 264.45,
+                "night": 254.6,
+                "eve": 258.03,
+                "morn": 260.97
+            },
+            "pressure": 1025,
+            "humidity": 79,
+            "dew_point": 267.27,
+            "wind_speed": 6.95,
+            "wind_deg": 229,
+            "wind_gust": 18.92,
+            "weather": [
+                {
+                    "id": 600,
+                    "main": "Snow",
+                    "description": "light snow",
+                    "icon": "13d"
+                }
+            ],
+            "clouds": 82,
+            "pop": 0.2,
+            "snow": 0.11,
+            "uvi": 4
+        }
+    ],
+    "alerts": [
+        {
+            "sender_name": "NWS Milwaukee (Southern and Southeastern Wisconsin)",
+            "event": "Wind Advisory",
+            "start": 1645369200,
+            "end": 1645390800,
+            "description": "...WIND ADVISORY REMAINS IN EFFECT FROM 9 AM THIS MORNING TO 3 PM\nCST THIS AFTERNOON...\n* WHAT...Southwest winds 20 to 25 mph with gusts up to 45 mph\nexpected.\n* WHERE...Portions of east central, south central and southeast\nWisconsin.\n* WHEN...From 9 AM this morning to 3 PM CST this afternoon.\n* IMPACTS...Gusty winds could blow around unsecured objects.\nTree limbs could be blown down and a few power outages may\nresult.",
+            "tags": [
+                "Wind"
+            ]
+        }
+    ]
+}
