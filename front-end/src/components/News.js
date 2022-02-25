@@ -1,14 +1,15 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { connect } from "react-redux";
-import { fetchNews } from '../redux/actions/newsAction';
 
 const News = (props) => {
     const { error, loading, lastUpdate, articles } = props;
     const date = new Date(lastUpdate);
 
-    useEffect(() => {
-        props.dispatch(fetchNews());
-    }, []);
+    if (loading) return null;
+    if (error) {
+        // TODO: send error to handler
+        return null;
+    }
 
     return (
         <div>

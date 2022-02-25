@@ -2,16 +2,6 @@ import React from "react";
 import { Portrait, Landscape } from './layouts';
 import { Background } from "./components";
 import useWindowSize from "./hooks/useWindowSize";
-import {
-    Calendar,
-    Clock,
-    News,
-    Quote,
-    Trello,
-    Trends,
-    Weather
-} from './components';
-
 
 const isDev = process.env.REACT_APP_ENV === "dev";
 

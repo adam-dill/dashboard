@@ -7,6 +7,9 @@ export function fetchData(endpoint, beginFn, successFn, failureFn) {
             .then(handleErrors)
             .then((res) => res.json())
             .then((data) => {
+                const flip = Math.random() <= 0.25;
+                if (flip)
+                    throw(new Error('this is an error message'));
                 dispatch(successFn(data));
                 return data;
             })

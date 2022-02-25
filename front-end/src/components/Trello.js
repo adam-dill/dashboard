@@ -1,14 +1,15 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { connect } from "react-redux";
-import { fetchTrello } from '../redux/actions/trelloAction';
 
 const Trello = (props) => {
     const { error, loading, lastUpdate, items } = props;
     const date = new Date(lastUpdate);
 
-    useEffect(() => {
-        props.dispatch(fetchTrello());
-    }, []);
+    if (loading) return null;
+    if (error) {
+        // TODO: send error to handler
+        return null;
+    }
 
     return (
         <div>

@@ -12,7 +12,7 @@ const timeReducer = (state = initialState, action) => {
                 time: action.data
             };
         default:
-            return {...state};
+            return state;
     }
 };
 export default timeReducer;

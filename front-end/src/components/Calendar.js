@@ -1,15 +1,16 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { connect } from "react-redux";
-import { fetchCalendar } from '../redux/actions/calendarAction';
 
 const Calendar = (props) => {
     const { error, loading, lastUpdate, dates } = props;
     const date = new Date(lastUpdate);
 
-    useEffect(() => {
-        props.dispatch(fetchCalendar());
-    }, []);
-
+    if (loading) return null;
+    if (error) {
+        // TODO: send error to handler
+        return null;
+    }
+    
     return (
         <div>
             <p>Calendar Last Update: {date.toLocaleTimeString()}</p>

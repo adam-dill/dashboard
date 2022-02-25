@@ -12,27 +12,35 @@ import {
 const DataCollector = (store) => {
 
     // Clock
+    store.dispatch(updateTime());
     delay(store, updateTime, 1);
 
     // Weather
+    store.dispatch(fetchWeather());
     delay(store, fetchWeather, 60);
 
     // Calendar (daily)
+    store.dispatch(fetchCalendar());
     delay(store, fetchCalendar, 1440);
 
     // News
+    store.dispatch(fetchNews());
     delay(store, fetchNews, 60);
 
     // Trello
+    store.dispatch(fetchTrello());
     delay(store, fetchTrello, 60);
 
     // Quote
+    store.dispatch(fetchQuote());
     delay(store, fetchQuote, 60);
 
     // Trends
+    store.dispatch(fetchTrends());
     delay(store, fetchTrends, 60);
 
     // Background
+    store.dispatch(fetchBackground());
     delay(store, fetchBackground, 60);
 };
 

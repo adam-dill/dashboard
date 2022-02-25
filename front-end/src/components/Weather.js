@@ -1,14 +1,15 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { connect } from "react-redux";
-import { fetchWeather } from '../redux/actions/weatherAction';
 
 const Weather = (props) => {
     const { error, loading, lastUpdate, data } = props;
     const date = new Date(lastUpdate);
 
-    useEffect(() => {
-        props.dispatch(fetchWeather());
-    }, []);
+    if (loading) return null;
+    if (error) {
+        // TODO: send error to handler
+        return null;
+    }
 
     return (
         <div>

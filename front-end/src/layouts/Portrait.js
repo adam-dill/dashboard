@@ -2,6 +2,7 @@ import React from 'react';
 import {
     Calendar,
     Clock,
+    Errors,
     News,
     Quote,
     Trello,
@@ -20,6 +21,7 @@ const Portrait = () => {
             </div>
             <div className="row">
                 <div className="col col-6 d-flex flex-column row-gap-1">
+                    <Errors />
                     <Trello />
                     <Quote />
                     <Calendar />

@@ -1,16 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { connect } from "react-redux";
-import { fetchBackground } from '../redux/actions/backgroundAction';
-import Image from './Image';
 
 const Background = (props) => {
     const { error, loading, lastUpdate, images } = props;
     const date = new Date(lastUpdate);
-
-    useEffect(() => {
-        props.dispatch(fetchBackground());
-    }, []);
-
     
     if (loading) return null;
     if (error) {
@@ -22,7 +15,6 @@ const Background = (props) => {
         <div>
             <p>Background Last Update: {date.toLocaleTimeString()}</p>
             <p className="code">{JSON.stringify(images)}</p>
-            
         </div>
     );
 };
