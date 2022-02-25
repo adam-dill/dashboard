@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchNews } from '../redux/actions/newsAction';
 
 const News = (props) => {
-    const { error, loading, lastUpdate, data } = props;
+    const { error, loading, lastUpdate, articles } = props;
     const date = new Date(lastUpdate);
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const News = (props) => {
     return (
         <div>
             <p>News Last Update: {date.toLocaleTimeString()}</p>
-            <p className="code">{JSON.stringify(data)}</p>
+            <p className="code">{JSON.stringify(articles)}</p>
         </div>
     );
 };
@@ -22,7 +22,7 @@ const mapStateToProps = state => ({
     lastUpdate: state.news.lastUpdate,
     loading: state.news.loading,
     error: state.news.error,
-    data: state.news.data,
+    articles: state.news.articles,
   });
 
 export default connect(mapStateToProps)(News);

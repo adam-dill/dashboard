@@ -6,9 +6,9 @@ import {
 
 const initialState = {
     lastUpdate: null,
-    data: null,
     loading: false,
-    error: null
+    error: null,
+    data: []
 };
 
 const weatherReducer = (state = initialState, action) => {
@@ -29,7 +29,7 @@ const weatherReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 lastUpdate: action.lastUpdate,
-                data: action.data
+                data: action.data.daily
             };
 
         case FETCH_WEATHER_FAILURE:

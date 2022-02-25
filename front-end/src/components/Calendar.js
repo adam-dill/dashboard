@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchCalendar } from '../redux/actions/calendarAction';
 
 const Calendar = (props) => {
-    const { error, loading, lastUpdate, data } = props;
+    const { error, loading, lastUpdate, dates } = props;
     const date = new Date(lastUpdate);
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const Calendar = (props) => {
     return (
         <div>
             <p>Calendar Last Update: {date.toLocaleTimeString()}</p>
-            <p className="code">{JSON.stringify(data)}</p>
+            <p className="code">{JSON.stringify(dates)}</p>
         </div>
     );
 };
@@ -22,7 +22,7 @@ const mapStateToProps = state => ({
     lastUpdate: state.calendar.lastUpdate,
     loading: state.calendar.loading,
     error: state.calendar.error,
-    data: state.calendar.data,
+    dates: state.calendar.dates,
   });
 
 export default connect(mapStateToProps)(Calendar);

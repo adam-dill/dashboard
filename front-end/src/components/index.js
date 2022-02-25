@@ -6,3 +6,5 @@ export { default as Quote } from "./Quote";
 export { default as Trello } from "./Trello";
 export { default as Trends } from "./Trends";
 export { default as Weather } from "./Weather";
+
+export { default as Image} from './Image';

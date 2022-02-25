@@ -6,9 +6,9 @@ import {
 
 const initialState = {
     lastUpdate: null,
-    data: null,
     loading: false,
-    error: null
+    error: null,
+    images: []
 };
 
 const backgroundReducer = (state = initialState, action) => {
@@ -29,7 +29,7 @@ const backgroundReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 lastUpdate: action.lastUpdate,
-                data: action.data
+                images: action.data.map(image => image.image_large)
             };
 
         case FETCH_BACKGROUND_FAILURE:

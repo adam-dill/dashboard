@@ -1,29 +1,45 @@
-import { updateTime } from "./redux/actions/timeAction";
-import { fetchWeather } from "./redux/actions/weatherAction";
+import { 
+    updateTime,
+    fetchWeather,
+    fetchCalendar,
+    fetchNews,
+    fetchTrello,
+    fetchQuote,
+    fetchTrends,
+    fetchBackground
+ } from "./redux/actions";
 
 const DataCollector = (store) => {
 
     // Clock
-    setInterval(() => {
-        //store.dispatch(updateTime());
-    }, 1000);
-
+    delay(store, updateTime, 1);
 
     // Weather
-    setInterval(() => {
-        store.dispatch(fetchWeather());
-    }, 120000)
+    delay(store, fetchWeather, 60);
 
-    // Calendar
-
+    // Calendar (daily)
+    delay(store, fetchCalendar, 1440);
 
     // News
-
+    delay(store, fetchNews, 60);
 
     // Trello
+    delay(store, fetchTrello, 60);
 
+    // Quote
+    delay(store, fetchQuote, 60);
 
+    // Trends
+    delay(store, fetchTrends, 60);
 
+    // Background
+    delay(store, fetchBackground, 60);
 };
+
+const delay = (store, fn, min) => {
+    setInterval(() => {
+        store.dispatch(fn());
+    }, min * 60 * 1000);
+}
 
 export default DataCollector;

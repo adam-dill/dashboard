@@ -6,9 +6,9 @@ import {
 
 const initialState = {
     lastUpdate: null,
-    data: null,
     loading: false,
-    error: null
+    error: null,
+    articles: []
 };
 
 const newsReducer = (state = initialState, action) => {
@@ -29,7 +29,15 @@ const newsReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 lastUpdate: action.lastUpdate,
-                data: action.data
+                articles: action.data.articles
+                    .map(value => {
+                        const index = value.title.lastIndexOf(' - ');
+                        const title = value.title.substring(0, index);
+                        return {
+                            title,
+                            source: value.source.name
+                        }
+                    })
             };
 
         case FETCH_NEWS_FAILURE:

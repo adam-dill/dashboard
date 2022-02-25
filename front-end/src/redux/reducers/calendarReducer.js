@@ -6,9 +6,9 @@ import {
 
 const initialState = {
     lastUpdate: null,
-    data: null,
     loading: false,
-    error: null
+    error: null,
+    dates: []
 };
 
 const calendarReducer = (state = initialState, action) => {
@@ -29,7 +29,20 @@ const calendarReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 lastUpdate: action.lastUpdate,
-                data: action.data
+                dates: action.data.response.holidays
+                    .map(item => {
+                        return {
+                            "name": item.name,
+                            "date": item.date.iso
+                        }
+                    })
+                    .filter((item, index, arr) => {
+                        // check if there is another of these further in the list
+                        const duplicates = arr.find((v, i) => {
+                            return i > index && v.name === item.name;
+                        });
+                        return !duplicates;
+                    })
             };
 
         case FETCH_CALENDAR_FAILURE:

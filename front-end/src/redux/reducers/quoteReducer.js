@@ -6,9 +6,10 @@ import {
 
 const initialState = {
     lastUpdate: null,
-    data: null,
     loading: false,
-    error: null
+    error: null,
+    quote: null,
+    author: null
 };
 
 const quoteReducer = (state = initialState, action) => {
@@ -29,7 +30,8 @@ const quoteReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 lastUpdate: action.lastUpdate,
-                data: action.data
+                quote: action.data.contents.quotes[0].quote,
+                author: action.data.contents.quotes[0].author
             };
 
         case FETCH_QUOTE_FAILURE:

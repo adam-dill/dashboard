@@ -6,9 +6,9 @@ import {
 
 const initialState = {
     lastUpdate: null,
-    data: null,
     loading: false,
-    error: null
+    error: null,
+    items: []
 };
 
 const trelloReducer = (state = initialState, action) => {
@@ -29,7 +29,8 @@ const trelloReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 lastUpdate: action.lastUpdate,
-                data: action.data
+                items: action.data
+                    .map(value => value.name)
             };
 
         case FETCH_TRELLO_FAILURE:

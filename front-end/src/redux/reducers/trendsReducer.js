@@ -29,7 +29,7 @@ const trendsReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 lastUpdate: action.lastUpdate,
-                data: action.data
+                data: JSON.parse(action.data[0].data).scores
             };
 
         case FETCH_TRENDS_FAILURE:
