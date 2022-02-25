@@ -35,7 +35,8 @@ app.get("/api/v1/*", (req, res) => {
     const route = req.params[0]?.toUpperCase();
     const key = process.env[route];
     
-    if (process.env.NODE_ENV === "mock") {
+    if (process.env.NODE_ENV === "dev") {
+        console.log(`serving mock ${route}`)
         fs.readFile(`./mock/${route.toLowerCase()}.json`, "utf8", (err, response) => {
             if (err) {
                 console.error(err);
@@ -45,6 +46,7 @@ app.get("/api/v1/*", (req, res) => {
             res.status(200).send(data);
         });
     } else {
+        console.log(`serving real ${route}`)
         // TRELLO is special
         const token = process.env.TRELLO_TOKEN;
         const board = process.env.TRELLO_BOARD;

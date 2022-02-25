@@ -4,14 +4,41 @@
      url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
     font-weight: regular;
 }
+
+@font-face {
+    font-family: "RobotoBlack";
+    src: local("RobotoBlack"),
+     url("../fonts/roboto/Roboto-Black.ttf") format("truetype");
+    font-weight: regular;
+}
+
+@font-face {
+    font-family: "RobotoThin";
+    src: local("RobotoThin"),
+     url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
+    font-weight: regular;
+}
     
 body {
-    margin: 0;
+    margin: 2em;
     padding: 0;
     font-family: RobotoRegular;
 }
 
-.response {
+h1, h2 { font-family: RobotoBlack; }
+h3 { font-family: RobotoThin; }
+
+.row-gap-1 { row-gap: 1em;}
+
+.debug-info {
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+}
+.code {
+    font-family: 'Courier New', Courier, monospace;
     max-height: 75px;
     overflow: auto;
     border: 1px solid grey;

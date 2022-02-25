@@ -13,7 +13,7 @@ const News = (props) => {
     return (
         <div>
             <p>News Last Update: {date.toLocaleTimeString()}</p>
-            <p className="response">{JSON.stringify(data)}</p>
+            <p className="code">{JSON.stringify(data)}</p>
         </div>
     );
 };

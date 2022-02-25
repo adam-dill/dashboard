@@ -6,8 +6,8 @@
     "scripts": {
         "test": "npm --prefix front-end run test",
         "build": "npm --prefix front-end run build",
-        "backend": "cross-env NODE_ENV=mock nodemon app.js",
-        "start": "npm run backend & npm --prefix front-end run start",
+        "backend": "nodemon app.js",
+        "start": "cross-env NODE_ENV=dev npm run backend & cross-env REACT_APP_ENV=dev npm --prefix front-end run start",
         "prod": "npm run build && node app.js & serve ./public"
     },
     "repository": {

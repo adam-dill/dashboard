@@ -13,7 +13,7 @@ const Weather = (props) => {
     return (
         <div>
             <p>Weather Last Update: {date.toLocaleTimeString()}</p>
-            <p className="response">{JSON.stringify(data)}</p>
+            <p className="code">{JSON.stringify(data)}</p>
         </div>
     );
 };

@@ -13,7 +13,7 @@ const Trends = (props) => {
     return (
         <div>
             <p>Trends Last Update: {date.toLocaleTimeString()}</p>
-            <p className="response">{JSON.stringify(data)}</p>
+            <p className="code">{JSON.stringify(data)}</p>
         </div>
     );
 };

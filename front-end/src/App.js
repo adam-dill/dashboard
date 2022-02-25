@@ -1,25 +1,40 @@
-import React from 'react';
-import Clock from './components/Clock';
-import Weather from './components/Weather';
-import News from './components/News';
-import Calendar from './components/Calendar';
-import Background from './components/Background';
-import Quote from './components/Quote';
-import Trends from './components/Trends';
-import Trello from './components/Trello';
+import React from "react";
+import { Portrait, Landscape } from './layouts';
+import { Background } from "./components";
+import useWindowSize from "./hooks/useWindowSize";
+import {
+    Calendar,
+    Clock,
+    News,
+    Quote,
+    Trello,
+    Trends,
+    Weather
+} from './components';
+
+
+const isDev = process.env.REACT_APP_ENV === "dev";
 
 function App() {
+    const size = useWindowSize();
 
     return (
-        <>  
-            <Clock />
-            <News />
-            <Calendar />
-            <Weather />
+        <>
+            {isDev && (
+                <div className="debug-info">
+                    {size.width}px / {size.height}px
+                </div>
+            )}
+            
+            <h1>Header 1</h1>
+            <h2>Header 2</h2>
+            <h3>Header 3</h3>
+            
             <Background />
-            <Quote />
-            <Trello />
-            <Trends />
+            {size.width > size.height
+                ? <Landscape />
+                : <Portrait />
+            }
         </>
     );
 }
