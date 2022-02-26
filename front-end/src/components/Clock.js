@@ -1,18 +1,27 @@
 import React from 'react';
 import { connect } from "react-redux";
 
-const Clock = ({time}) => {
+const Clock = ({est, pst, cst}) => {
 
     return (
-        <div>
-            {time && time.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}
+        <div className="clock-container">
+            <div className="current-time">
+                {cst}
+            </div>
+            <div className="other-time">
+                <div>NY: {est}</div>
+                <div className="seperator"></div>
+                <div>LA: {pst}</div>
+            </div>
         </div>
     );
 };
 
 const mapStateToProps = (state) => ({
     ...state,
-    time: state.clock.time
+    est: state.clock.est,
+    pst: state.clock.pst,
+    cst: state.clock.cst
 });
 
 export default connect(mapStateToProps)(Clock);

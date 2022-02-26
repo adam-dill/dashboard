@@ -1,0 +1,26 @@
+.clock-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-family: $FontHeaderThin;
+    flex-wrap: wrap;
+
+    .current-time {
+        flex-grow: 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 375%;
+    }
+
+    .other-time {
+        flex-grow: 3;
+        text-align: center;
+
+        .seperator {
+            height: 1px;
+            background-color: $white;
+            margin: 0.5em 0;
+        }
+    }
+}
