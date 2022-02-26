@@ -36,6 +36,10 @@
 .landscape .clock-container {
     flex-direction: column;
 
+    .current-time {
+        font-size: 600%;
+    }
+    
     .other-time {
         display: flex;
         flex-grow: 0;

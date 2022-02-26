@@ -16,7 +16,7 @@ const Portrait = () => {
             <div className="row mb-4">
                 <Clock />
             </div>
-            <div className="row">
+            <div className="row mb-4">
                 <Weather />
             </div>
             <div className="row">
