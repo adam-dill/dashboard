@@ -5,8 +5,10 @@ import useWindowSize from "./hooks/useWindowSize";
 
 const isDev = process.env.REACT_APP_ENV === "dev";
 
+
 function App() {
     const size = useWindowSize();
+
 
     return (
         <>
@@ -16,11 +18,7 @@ function App() {
                 </div>
             )}
             
-            <h1>Header 1</h1>
-            <h2>Header 2</h2>
-            <h3>Header 3</h3>
-            
-            <Background />
+            <Background delay={60000} />
             {size.width > size.height
                 ? <Landscape />
                 : <Portrait />

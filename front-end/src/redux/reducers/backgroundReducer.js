@@ -29,7 +29,9 @@ const backgroundReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 lastUpdate: action.lastUpdate,
-                images: action.data.map(image => image.image_large)
+                images: action.data
+                    .map(image => image.image_large)
+                    .shuffle()
             };
 
         case FETCH_BACKGROUND_FAILURE:

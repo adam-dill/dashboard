@@ -1,2 +1,29 @@
 @use '~bootstrap/scss/bootstrap.scss';
-@use 'styles/common.scss';
+@import 'styles/fonts.scss';
+@import 'styles/variables.scss';
+@import 'styles/animation.scss';
+@import 'styles/common.scss';
+@import 'styles/components.scss';
+
+body {
+    margin: 2em;
+    padding: 0;
+    font-family: $FontBody;
+    color: $white;
+    background-color: $black;
+}
+
+.debug-info {
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+}
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    max-height: 75px;
+    overflow: auto;
+    border: 1px solid grey;
+    padding: 15px;
+}

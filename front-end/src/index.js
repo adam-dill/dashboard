@@ -7,6 +7,7 @@ import App from "./App";
 import DataCollector from "./DataCollector";
 import reportWebVitals from "./reportWebVitals";
 
+import './shim.js';
 import './fonts/roboto/Roboto-Regular.ttf';
 import './fonts/roboto/Roboto-Black.ttf';
 import './fonts/roboto/Roboto-Thin.ttf';

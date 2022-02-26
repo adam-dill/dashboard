@@ -38,11 +38,6 @@ app.get("/api/v1/*", (req, res) => {
     if (process.env.NODE_ENV === "dev") {
         console.log(`serving mock ${route}`)
         fs.readFile(`./mock/${route.toLowerCase()}.json`, "utf8", (err, response) => {
-            const flip = Math.random() <= 0.25;
-            if (flip) {
-                res.status(400).send();
-                return;
-            }
             if (err) {
                 res.send(err);
                 return;

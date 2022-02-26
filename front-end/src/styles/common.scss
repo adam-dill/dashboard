@@ -1,47 +1,21 @@
-@font-face {
-    font-family: "RobotoRegular";
-    src: local("RobotoRegular"),
-     url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
-    font-weight: regular;
-}
-
-@font-face {
-    font-family: "RobotoBlack";
-    src: local("RobotoBlack"),
-     url("../fonts/roboto/Roboto-Black.ttf") format("truetype");
-    font-weight: regular;
-}
-
-@font-face {
-    font-family: "RobotoThin";
-    src: local("RobotoThin"),
-     url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
-    font-weight: regular;
-}
-    
-body {
-    margin: 2em;
-    padding: 0;
-    font-family: RobotoRegular;
-}
-
-h1, h2 { font-family: RobotoBlack; }
-h3 { font-family: RobotoThin; }
+h1, h2 { font-family: $FontHeader; }
+h3 { font-family: $FontHeaderThin; }
 
 .row-gap-1 { row-gap: 1em;}
 
-.debug-info {
-    position:fixed;
-    top: 0;
-    left: 0;
-    background-color: black;
-    color: white;
-}
-.code {
-    font-family: 'Courier New', Courier, monospace;
-    max-height: 75px;
-    overflow: auto;
-    border: 1px solid grey;
-    padding: 15px;
-}
+.opacity-0 { opacity: 0; }
+.opacity-10 { opacity: .10; }
+.opacity-20 { opacity: .20; }
+.opacity-30 { opacity: .30; }
+.opacity-40 { opacity: .40; }
+.opacity-50 { opacity: .50; }
+.opacity-60 { opacity: .60; }
+.opacity-70 { opacity: .70; }
+.opacity-80 { opacity: .80; }
+.opacity-90 { opacity: .90; }
+.opacity-0 { opacity: 1; }
+
+.fade-in-5 { animation: fadeIn 5s; }
+
+
 
