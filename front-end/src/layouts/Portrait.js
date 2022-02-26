@@ -13,7 +13,7 @@ import {
 const Portrait = () => {
     return (
         <div className="portrait">
-            <div className="row">
+            <div className="row mb-4">
                 <Clock />
             </div>
             <div className="row">

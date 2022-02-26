@@ -13,7 +13,7 @@ import {
 const Landscape = () => {
     return (
         <div className="landscape">
-            <div className="row">
+            <div className="row mb-4">
                 <div className="col col-3">
                     <Clock />
                 </div>
