@@ -38,8 +38,13 @@ app.get("/api/v1/*", (req, res) => {
     if (process.env.NODE_ENV === "dev") {
         console.log(`serving mock ${route}`)
         fs.readFile(`./mock/${route.toLowerCase()}.json`, "utf8", (err, response) => {
+            const flip = Math.random() <= 0.25;
+            if (flip) {
+                res.status(400).send();
+                return;
+            }
             if (err) {
-                console.error(err);
+                res.send(err);
                 return;
             }
             const data = JSON.parse(response);
@@ -58,8 +63,7 @@ app.get("/api/v1/*", (req, res) => {
 
         request(url, { json: true }, (err, _, body) => {
             if (err) { 
-                console.error(err); 
-                res.status(500).send(err);
+                res.send(err);
                 return;
             }
             res.status(200).send(body);
