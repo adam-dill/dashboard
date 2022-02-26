@@ -34,7 +34,7 @@ const urls = {
 app.get("/api/v1/*", (req, res) => {
     const route = req.params[0]?.toUpperCase();
     const key = process.env[route];
-    
+    console.log(urls.WEATHER);
     if (process.env.NODE_ENV === "dev") {
         console.log(`serving mock ${route}`)
         fs.readFile(`./mock/${route.toLowerCase()}.json`, "utf8", (err, response) => {

@@ -3,12 +3,13 @@ import {
     FETCH_WEATHER_SUCCESS,
     FETCH_WEATHER_FAILURE
 } from "../actions/weatherAction";
+import { days } from "../../constants";
 
 const initialState = {
     lastUpdate: null,
     loading: false,
     error: null,
-    data: []
+    forcast: []
 };
 
 const weatherReducer = (state = initialState, action) => {
@@ -25,11 +26,26 @@ const weatherReducer = (state = initialState, action) => {
         case FETCH_WEATHER_SUCCESS:
             // All done: set loading "false".
             // Also, replace the items with the ones from the server
+            const forcast = action.data.daily
+                .filter((value, index) => index < 5)
+                .map(value => {
+                    const ts = parseInt(value.dt);
+                    const date = new Date(ts * 1000);
+                    const day = days[date.getDay()];
+                    return {
+                        day,
+                        temp: Math.round(value.temp.day),
+                        max: Math.round(value.temp.max),
+                        min: Math.round(value.temp.min),
+                        label: value.weather[0].main,
+                        icon: value.weather[0].icon
+                    }
+                })
             return {
                 ...state,
                 loading: false,
                 lastUpdate: action.lastUpdate,
-                data: action.data.daily
+                forcast
             };
 
         case FETCH_WEATHER_FAILURE:
