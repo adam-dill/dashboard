@@ -6,9 +6,9 @@
     "scripts": {
         "test": "npm --prefix front-end run test",
         "build": "npm --prefix front-end run build",
-        "backend": "nodemon app.js",
-        "start": "cross-env NODE_ENV=dev npm run backend & cross-env REACT_APP_ENV=dev npm --prefix front-end run start",
-        "prod": "npm run build && node app.js & serve ./public"
+        "backend": "cross-env NODE_ENV=dev nodemon app.js",
+        "start": "npm run backend & cross-env REACT_APP_ENV=dev npm --prefix front-end run start",
+        "prod": "npm install && npm --prefix front-end install && npm run build && node app.js & serve ./public"
     },
     "repository": {
         "type": "git",

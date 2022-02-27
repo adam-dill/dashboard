@@ -14,6 +14,7 @@ console.log('environment: ', process.env.NODE_ENV);
 app.get("/api/v1/ping", (req, res) => {
     res.status(200).send({
         message: "Server is Running",
+        version: "1.0.0"
     });
 });
 

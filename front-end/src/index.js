@@ -6,6 +6,7 @@ import configureStore from './redux/store';
 import App from "./App";
 import DataCollector from "./DataCollector";
 import reportWebVitals from "./reportWebVitals";
+import { api } from "./redux/actions/baseAction";
 
 import './shim.js';
 import './fonts/roboto/Roboto-Regular.ttf';
@@ -13,7 +14,18 @@ import './fonts/roboto/Roboto-Black.ttf';
 import './fonts/roboto/Roboto-Thin.ttf';
 
 const store = configureStore();
-DataCollector(store);
+
+// Wait for the backend to become available.
+const interval = setInterval(() => {
+    fetch(`${api}/ping`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            clearInterval(interval);
+            DataCollector(store);
+        })
+        .catch(console.log);
+}, 3000);
 
 ReactDOM.render(
     <React.StrictMode>

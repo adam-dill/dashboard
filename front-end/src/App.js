@@ -5,10 +5,8 @@ import useWindowSize from "./hooks/useWindowSize";
 
 const isDev = process.env.REACT_APP_ENV === "dev";
 
-
 function App() {
     const size = useWindowSize();
-
 
     return (
         <>

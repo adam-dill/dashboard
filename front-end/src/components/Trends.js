@@ -37,7 +37,7 @@ const Trends = (props) => {
         // TODO: send error to handler
         return null;
     }
-    console.log(data);
+
     return (
         <div>
             <h3>Stocks Trending <span className="last-update">{lastUpdate}</span></h3>

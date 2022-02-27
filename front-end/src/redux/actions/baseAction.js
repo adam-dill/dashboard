@@ -1,9 +1,9 @@
-const url = "http://localhost:5000/api/v1";
+export const api = "http://localhost:5000/api/v1";
 
 export function fetchData(endpoint, beginFn, successFn, failureFn) {
     return (dispatch) => {
         dispatch(beginFn());
-        return fetch(`${url}${endpoint}`)
+        return fetch(`${api}${endpoint}`)
             .then(handleErrors)
             .then((res) => res.json())
             .then((data) => {
