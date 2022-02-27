@@ -7,11 +7,16 @@ const Calendar = (props) => {
 
     useEffect(() => {
         let group = {};
+        const options = { weekday: 'short', month: 'short', day: 'numeric' };
         dates.forEach(element => {
-            if (!group[element.date]) {
-                group[element.date] = [];
+            const date = new Date(element.date)
+            let format = date.toLocaleDateString([], options);
+            const nth = date.getDate().nth();
+            format = format.replace(date.getDate(), nth);
+            if (!group[format]) {
+                group[format] = [];
             }
-            group[element.date].push(element.name);
+            group[format].push(element.name);
         });
         setDisplay(group);
     }, [setDisplay, dates]);

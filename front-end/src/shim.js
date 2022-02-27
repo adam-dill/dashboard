@@ -19,4 +19,16 @@ Array.prototype.chunk = function(size) {
     }
     return returnValue;
 }
+
+Number.prototype.nth= function(){
+    if(this%1) return this;
+    var s= this%100;
+    if(s>3 && s<21) return this+'th';
+    switch(s%10){
+        case 1: return this+'st';
+        case 2: return this+'nd';
+        case 3: return this+'rd';
+        default: return this+'th';
+    }
+}
 /* eslint-enable */
