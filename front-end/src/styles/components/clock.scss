@@ -10,18 +10,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 450%;
+        font-size: 600%;
         text-align: center;
         line-height: 1.2;
 
         .date {
-            font-size: 30%;
+            font-size: 40%;
         }
     }
 
     .other-time {
         flex-grow: 3;
         text-align: center;
+        font-size: 200%;
 
         .seperator {
             height: 1px;
@@ -35,16 +36,13 @@
 
 .landscape .clock-container {
     flex-direction: column;
-
-    .current-time {
-        font-size: 600%;
-    }
     
     .other-time {
         display: flex;
         flex-grow: 0;
         width: 100%;
         justify-content: center;
+        font-size: 140%;
 
         >div {
             display: flex;
@@ -56,7 +54,7 @@
             display: inherit;
             height: 100%;
             width: 1px;
-            margin: 0 2em;
+            margin: 0 1em;
         }
     }
 }
