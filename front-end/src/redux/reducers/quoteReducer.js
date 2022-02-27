@@ -3,6 +3,7 @@ import {
     FETCH_QUOTE_SUCCESS,
     FETCH_QUOTE_FAILURE
 } from "../actions/quoteAction";
+import { formatLastUpdate } from "./rootReducer";
 
 const initialState = {
     lastUpdate: null,
@@ -29,7 +30,7 @@ const quoteReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
-                lastUpdate: action.lastUpdate,
+                lastUpdate: formatLastUpdate(action.lastUpdate),
                 quote: action.data.contents.quotes[0].quote,
                 author: action.data.contents.quotes[0].author
             };

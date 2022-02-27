@@ -3,6 +3,7 @@ import {
     FETCH_TRELLO_SUCCESS,
     FETCH_TRELLO_FAILURE
 } from "../actions/trelloAction";
+import { formatLastUpdate } from "./rootReducer";
 
 const initialState = {
     lastUpdate: null,
@@ -28,7 +29,7 @@ const trelloReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
-                lastUpdate: action.lastUpdate,
+                lastUpdate: formatLastUpdate(action.lastUpdate),
                 items: action.data
                     .map(value => value.name)
             };

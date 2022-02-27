@@ -1,0 +1,16 @@
+.news-container {
+
+    .articles {
+        font-size: 70%;
+    }
+    
+    .article {
+        padding: 0.5em 0.75em;
+        margin: 1em 0;
+        background-color: rgba($color: $white, $alpha: 0.2);
+    }
+
+    .source {
+        color: $aqua;
+    }
+}

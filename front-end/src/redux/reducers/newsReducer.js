@@ -3,6 +3,7 @@ import {
     FETCH_NEWS_SUCCESS,
     FETCH_NEWS_FAILURE
 } from "../actions/newsAction";
+import { formatLastUpdate } from "./rootReducer";
 
 const initialState = {
     lastUpdate: null,
@@ -28,7 +29,7 @@ const newsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
-                lastUpdate: action.lastUpdate,
+                lastUpdate: formatLastUpdate(action.lastUpdate),
                 articles: action.data.articles
                     .map(value => {
                         const index = value.title.lastIndexOf(' - ');

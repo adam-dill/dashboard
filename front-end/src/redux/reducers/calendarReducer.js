@@ -3,6 +3,7 @@ import {
     FETCH_CALENDAR_SUCCESS,
     FETCH_CALENDAR_FAILURE
 } from "../actions/calendarAction";
+import { formatLastUpdate } from "./rootReducer";
 
 const initialState = {
     lastUpdate: null,
@@ -28,7 +29,7 @@ const calendarReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
-                lastUpdate: action.lastUpdate,
+                lastUpdate: formatLastUpdate(action.lastUpdate),
                 dates: action.data.response.holidays
                     .map(item => {
                         return {

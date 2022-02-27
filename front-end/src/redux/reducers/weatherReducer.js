@@ -4,6 +4,7 @@ import {
     FETCH_WEATHER_FAILURE
 } from "../actions/weatherAction";
 import { days } from "../../constants";
+import { formatLastUpdate } from "./rootReducer";
 
 const initialState = {
     lastUpdate: null,
@@ -44,7 +45,7 @@ const weatherReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
-                lastUpdate: action.lastUpdate,
+                lastUpdate: formatLastUpdate(action.lastUpdate),
                 forcast
             };
 

@@ -3,6 +3,7 @@ import {
     FETCH_TRENDS_SUCCESS,
     FETCH_TRENDS_FAILURE
 } from "../actions/trendsAction";
+import { formatLastUpdate } from "./rootReducer";
 
 const initialState = {
     lastUpdate: null,
@@ -28,7 +29,7 @@ const trendsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
-                lastUpdate: action.lastUpdate,
+                lastUpdate: formatLastUpdate(action.lastUpdate),
                 data: JSON.parse(action.data[0].data).scores
             };
 

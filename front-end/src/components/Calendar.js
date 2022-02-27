@@ -13,7 +13,7 @@ const Calendar = (props) => {
     
     return (
         <div>
-            <p>Calendar Last Update: {date.toLocaleTimeString()}</p>
+            <h3>Calendar <em className="last-update">{lastUpdate}</em></h3>
             <p className="code">{JSON.stringify(dates)}</p>
         </div>
     );

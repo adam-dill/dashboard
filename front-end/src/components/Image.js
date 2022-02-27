@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 const FADE_DURATION = 5000;
 
-const Image = ({source, style, containerStyle, fadeInStyle}) => {
+const Image = ({source, style, containerStyle, fadeInStyle, altText=""}) => {
     const [currentImage, setCurrentImage] = useState();
     const [incomingImage, setIncomingImage] = useState();
 
@@ -26,8 +26,8 @@ const Image = ({source, style, containerStyle, fadeInStyle}) => {
 
     return (
         <div className={containerStyle}>
-            {incomingImage && <img src={incomingImage} className={`position-absolute ${fadeInStyle} ${style}`} />}
-            {currentImage && <img src={currentImage} className={`${style}`} />}
+            {incomingImage && <img src={incomingImage} className={`position-absolute ${fadeInStyle} ${style}`} alt={altText} />}
+            {currentImage && <img src={currentImage} className={`${style}`} alt={altText} />}
         </div>
     );
 };

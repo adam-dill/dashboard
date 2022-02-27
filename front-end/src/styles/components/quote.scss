@@ -1,0 +1,12 @@
+.quote-container {
+    padding: 1em;
+
+    .quote {
+        font-style: italic;
+    }
+
+    .author {
+        color:$aqua;
+        margin-top: 0.5em;
+    }
+}

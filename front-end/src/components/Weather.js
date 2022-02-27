@@ -23,16 +23,13 @@ const Icon = {
 }
 
 const Weather = (props) => {
-    const { error, loading, lastUpdate, forcast } = props;
-    const date = new Date(lastUpdate);
+    const { error, loading, forcast } = props;
 
     if (loading) return null;
     if (error) {
         // TODO: send error to handler
         return null;
     }
-
-    console.log(forcast)
 
     const getDay = ({day, temp, min, max, label, icon}, index) => {
         return (
@@ -49,7 +46,7 @@ const Weather = (props) => {
     }
 
     const getForcast = () => {
-        return forcast.map((value, index) => getDay(value, index));
+        return forcast.map(getDay);
     }
 
     return (
@@ -60,7 +57,6 @@ const Weather = (props) => {
 };
 
 const mapStateToProps = state => ({
-    lastUpdate: state.weather.lastUpdate,
     loading: state.weather.loading,
     error: state.weather.error,
     forcast: state.weather.forcast,

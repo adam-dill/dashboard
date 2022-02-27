@@ -13,7 +13,7 @@ const Trello = (props) => {
 
     return (
         <div>
-            <p>Trello Last Update: {date.toLocaleTimeString()}</p>
+            <h3>Trello <em className="last-update">{lastUpdate}</em></h3>
             <p className="code">{JSON.stringify(items)}</p>
         </div>
     );

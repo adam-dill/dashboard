@@ -12,9 +12,10 @@ const Quote = (props) => {
     }
 
     return (
-        <div>
-            <p>Quote Last Update: {date.toLocaleTimeString()}</p>
-            <p className="code">{JSON.stringify(quote)} - {author}</p>
+        <div className="quote-container">
+            <h3>Quote <em className="last-update">{lastUpdate}</em></h3>
+            <div className="quote">{quote}</div>
+            <div className="author">{author}</div>
         </div>
     );
 };
