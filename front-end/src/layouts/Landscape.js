@@ -27,7 +27,7 @@ const Landscape = () => {
                     <Calendar />
                 </div>
                 <div className="col col-4 d-flex flex-column row-gap-1">
-                    <News max={10} />
+                    <News max={3} />
                 </div>
                 <div className="col col-4 d-flex flex-column row-gap-1">
                     <Trello />
