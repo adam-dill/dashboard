@@ -11,10 +11,13 @@ const Trello = (props) => {
         return null;
     }
 
+    if (items && items.length === 0) return null;
     return (
-        <div>
+        <div className="trello-container">
             <h3>Trello <em className="last-update">{lastUpdate}</em></h3>
-            <p className="code">{JSON.stringify(items)}</p>
+            <div>
+                {items.map((value, index) => <div key={index}>{value}</div>)}
+            </div>
         </div>
     );
 };
