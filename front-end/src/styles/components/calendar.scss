@@ -1,0 +1,19 @@
+.calendar-container {
+    .date {
+        padding: 0.5em;
+        background-color: rgba($color: $aqua, $alpha: 0.5);
+        border-bottom: solid 3px $aqua;
+        margin-bottom: 1em;
+    }
+
+    .items {
+
+        >div {
+            padding-bottom: 0.5em;
+
+            &:last-child {
+                margin-bottom: 1em;
+            }
+        }
+    }
+}

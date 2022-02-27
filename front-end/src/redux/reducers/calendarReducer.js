@@ -37,6 +37,13 @@ const calendarReducer = (state = initialState, action) => {
                             "date": item.date.iso
                         }
                     })
+                    .filter(item => {
+                        const now = new Date();
+                        const end = new Date();
+                        end.setDate(now.getDate() + 3);
+                        const target = new Date(item.date);
+                        return target.getTime() >= now.getTime() && target.getTime() <= end.getTime();
+                    })
                     .filter((item, index, arr) => {
                         // check if there is another of these further in the list
                         const duplicates = arr.find((v, i) => {
