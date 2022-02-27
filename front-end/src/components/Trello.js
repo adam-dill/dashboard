@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 
 const Trello = (props) => {
     const { error, loading, lastUpdate, items } = props;
-    const date = new Date(lastUpdate);
 
     if (loading) return null;
     if (error) {
@@ -14,7 +13,7 @@ const Trello = (props) => {
     if (items && items.length === 0) return null;
     return (
         <div className="trello-container">
-            <h3>Trello <em className="last-update">{lastUpdate}</em></h3>
+            <h3>To-Do <em className="last-update">{lastUpdate}</em></h3>
             <div>
                 {items.map((value, index) => <div key={index}>{value}</div>)}
             </div>

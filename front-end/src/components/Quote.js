@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 
 const Quote = (props) => {
     const { error, loading, lastUpdate, quote, author } = props;
-    const date = new Date(lastUpdate);
 
     if (loading) return null;
     if (error) {

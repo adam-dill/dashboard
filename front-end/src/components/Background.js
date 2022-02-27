@@ -5,8 +5,6 @@ import Image from './Image';
 const Background = (props) => {
     const { error, loading, images, delay } = props;
     const [index, setIndex] = useState(0);
-    
-    
 
     useEffect(() => {
         const interval = setInterval(() => {

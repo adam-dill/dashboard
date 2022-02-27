@@ -26,11 +26,29 @@ const trendsReducer = (state = initialState, action) => {
         case FETCH_TRENDS_SUCCESS:
             // All done: set loading "false".
             // Also, replace the items with the ones from the server
+            const resultData = JSON.parse(action.data[0].data);
+            const tickers = Object.keys(resultData.scores);
+            // assume all data is structured consistently.
+            const trackingKeys = Object.keys(resultData.scores[tickers[0]]);
+            const colorNames = [
+                "rgb(255, 0, 255)",
+                "rgb(124, 252, 0)",
+                "rgb(70, 130, 180)",
+            ];
+            const datasets = trackingKeys
+                .filter(key => key !== 'neu')
+                .map((key, index) => {
+                    return {
+                        label: key,
+                        data: tickers.map(ticker => resultData.scores[ticker][key]),
+                        backgroundColor: colorNames[index]
+                    }
+                });
             return {
                 ...state,
                 loading: false,
                 lastUpdate: formatLastUpdate(action.lastUpdate),
-                data: JSON.parse(action.data[0].data).scores
+                data: { labels: tickers, datasets }
             };
 
         case FETCH_TRENDS_FAILURE:
