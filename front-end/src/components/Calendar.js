@@ -44,7 +44,7 @@ const Calendar = (props) => {
     
     return (
         <div className="calendar-container">
-            <h3>Calendar <em className="last-update">{lastUpdate}</em></h3>
+            <h3 className="hidden">Calendar <em className="last-update">{lastUpdate}</em></h3>
             {display && getDisplay()}
         </div>
     );

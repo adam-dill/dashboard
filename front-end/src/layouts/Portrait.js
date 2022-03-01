@@ -22,8 +22,8 @@ const Portrait = () => {
             <div className="row">
                 <div className="col col-6 d-flex flex-column row-gap-1">
                     <Errors />
-                    <Trello />
                     <Quote />
+                    <Trello />
                     <Calendar />
                 </div>
                 <div className="col col-6 d-flex flex-column row-gap-1">
