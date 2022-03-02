@@ -5,14 +5,31 @@ const Calendar = (props) => {
     const { error, loading, lastUpdate, dates } = props;
     const [display, setDisplay] = useState({});
 
+    const match = (a, b) => {
+        return (
+            a.getDate() === b.getDate() &&
+            a.getMonth() === b.getMonth() &&
+            a.getYear() === b.getYear()
+        );
+    }
+
     useEffect(() => {
         let group = {};
         const options = { weekday: 'short', month: 'short', day: 'numeric' };
         dates.forEach(element => {
             const date = new Date(element.date)
+            const today = new Date();
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+
             let format = date.toLocaleDateString([], options);
             const nth = date.getDate().nth();
             format = format.replace(date.getDate(), nth);
+            if (match(date, today)) {
+                format = 'Today';
+            } else if (match(date, tomorrow)) {
+                format = 'Tomorrow';
+            }
             if (!group[format]) {
                 group[format] = [];
             }
