@@ -56,7 +56,6 @@ const daily = (store, fn, hour) => {
         const update = new Date();
         const onHour = hour === undefined || update.getHours() === hour;
         if (!compareDate(now, update) && onHour) {
-            console.log('updating....');
             now = new Date();
             store.dispatch(fn());
         }
