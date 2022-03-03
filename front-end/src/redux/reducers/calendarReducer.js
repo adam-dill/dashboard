@@ -40,7 +40,7 @@ const calendarReducer = (state = initialState, action) => {
                     .filter(item => {
                         const now = new Date();
                         const end = new Date();
-                        end.setDate(now.getDate() + 3);
+                        end.setDate(now.getDate() + 7);
                         const target = new Date(item.date);
                         return target.getTime() >= now.getTime() && target.getTime() <= end.getTime();
                     })

@@ -21,7 +21,7 @@ const DataCollector = (store) => {
 
     // Calendar
     store.dispatch(fetchCalendar());
-    delay(store, fetchCalendar, 60);
+    daily(store, fetchCalendar);
 
     // News
     store.dispatch(fetchNews());
@@ -33,21 +33,40 @@ const DataCollector = (store) => {
 
     // Quote
     store.dispatch(fetchQuote());
-    delay(store, fetchQuote, 60);
+    daily(store, fetchQuote);
 
     // Trends
     store.dispatch(fetchTrends());
-    delay(store, fetchTrends, 60);
+    daily(store, fetchTrends);
 
     // Background
     store.dispatch(fetchBackground());
-    delay(store, fetchBackground, 60);
+    daily(store, fetchBackground);
 };
 
 const delay = (store, fn, min) => {
     setInterval(() => {
         store.dispatch(fn());
     }, min * 60 * 1000);
+}
+
+const daily = (store, fn) => {
+    let now = new Date();
+    setInterval(() => {
+        if (!compareDate(now, new Date())) {
+            console.log('updating....');
+            now = new Date();
+            store.dispatch(fn());
+        }
+    }, 60000)
+}
+
+const compareDate = (a, b) => {
+    return (
+        a.getDate() === b.getDate() &&
+        a.getMonth() === b.getMonth() &&
+        a.getYear() === b.getYear()
+    );
 }
 
 export default DataCollector;
