@@ -19,9 +19,9 @@ const DataCollector = (store) => {
     store.dispatch(fetchWeather());
     delay(store, fetchWeather, 60);
 
-    // Calendar (daily)
+    // Calendar
     store.dispatch(fetchCalendar());
-    delay(store, fetchCalendar, 1440);
+    delay(store, fetchCalendar, 60);
 
     // News
     store.dispatch(fetchNews());
