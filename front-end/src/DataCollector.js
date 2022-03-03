@@ -29,15 +29,15 @@ const DataCollector = (store) => {
 
     // Trello
     store.dispatch(fetchTrello());
-    delay(store, fetchTrello, 60);
+    delay(store, fetchTrello, 60, 5);
 
     // Quote
     store.dispatch(fetchQuote());
-    daily(store, fetchQuote);
+    daily(store, fetchQuote, 5);
 
     // Trends
     store.dispatch(fetchTrends());
-    daily(store, fetchTrends);
+    daily(store, fetchTrends, 5);
 
     // Background
     store.dispatch(fetchBackground());
@@ -50,10 +50,12 @@ const delay = (store, fn, min) => {
     }, min * 60 * 1000);
 }
 
-const daily = (store, fn) => {
+const daily = (store, fn, hour) => {
     let now = new Date();
     setInterval(() => {
-        if (!compareDate(now, new Date())) {
+        const update = new Date();
+        const onHour = hour === undefined || update.getHours() === hour;
+        if (!compareDate(now, update) && onHour) {
             console.log('updating....');
             now = new Date();
             store.dispatch(fn());
