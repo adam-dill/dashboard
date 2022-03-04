@@ -29,7 +29,7 @@ const DataCollector = (store) => {
 
     // Trello
     store.dispatch(fetchTrello());
-    delay(store, fetchTrello, 60, 5);
+    delay(store, fetchTrello, 60);
 
     // Quote
     store.dispatch(fetchQuote());

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
 import { Bar } from 'react-chartjs-2';
 
@@ -31,6 +31,15 @@ const options = {
 
 const Trends = (props) => {
     const { error, loading, lastUpdate, data } = props;
+    const [guid, setGuid] = useState(Math.random());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setGuid(Math.random());
+        }, 1000);
+
+        return () => clearInterval(interval);
+    });
 
     if (loading) return null;
     if (error) {
@@ -41,7 +50,7 @@ const Trends = (props) => {
     return (
         <div>
             <h3>Stocks Trending <span className="last-update">{lastUpdate}</span></h3>
-            {data && <Bar data={data} options={options} />}
+            {data && <Bar data={data} options={options} guid={guid} />}
         </div>
     );
 };
