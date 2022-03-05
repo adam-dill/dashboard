@@ -23,14 +23,14 @@ const Landscape = () => {
             </div>
             <div className="row">
                 <div className="col col-4 d-flex flex-column row-gap-1">
-                    <Quote />
+                    <Trello />
                     <Calendar />
                 </div>
                 <div className="col col-4 d-flex flex-column row-gap-1">
-                    <News max={3} />
+                    <News />
                 </div>
                 <div className="col col-4 d-flex flex-column row-gap-1">
-                    <Trello />
+                    <Quote />
                     <Trends />
                     <Errors />
                 </div>

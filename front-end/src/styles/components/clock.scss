@@ -24,6 +24,10 @@
         text-align: center;
         font-size: 200%;
 
+        .mute {
+            font-size: 70%;
+        }
+
         .seperator {
             height: 1px;
             background-color: $white;
@@ -46,8 +50,12 @@
 
         >div {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             justify-content: center;
+        }
+
+        .mute {
+            margin-right: 0.5em;
         }
 
         .seperator {

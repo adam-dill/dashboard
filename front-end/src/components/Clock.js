@@ -12,9 +12,9 @@ const Clock = ({est, pst, cst, month, day, date}) => {
                 </div>
             </div>
             <div className="other-time">
-                <div>NY: {est}</div>
+                <div><span className="mute">NY:</span> {est}</div>
                 <div className="seperator"></div>
-                <div>LA: {pst}</div>
+                <div><span className="mute">LA:</span> {pst}</div>
             </div>
         </div>
     );
