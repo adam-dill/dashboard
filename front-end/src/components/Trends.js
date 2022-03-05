@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
 import { Bar } from 'react-chartjs-2';
 
-const options = {
+const _options = {
     defaultFontColor: 'white',
     scales: {
         yAxes: [
@@ -31,11 +31,13 @@ const options = {
 
 const Trends = (props) => {
     const { error, loading, lastUpdate, data } = props;
-    const [guid, setGuid] = useState(Math.random());
+    const [options, setOptions] = useState(_options);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setGuid(Math.random());
+            const newOptions = JSON.parse(JSON.stringify(options));
+            newOptions.guid = Math.random();
+            setOptions(newOptions);
         }, 1000);
 
         return () => clearInterval(interval);
@@ -50,7 +52,7 @@ const Trends = (props) => {
     return (
         <div>
             <h3>Stocks Trending <span className="last-update">{lastUpdate}</span></h3>
-            {data && <Bar data={data} options={options} guid={guid} />}
+            {data && <Bar data={data} options={options} />}
         </div>
     );
 };
