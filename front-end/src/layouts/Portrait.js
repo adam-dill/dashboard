@@ -6,7 +6,6 @@ import {
     News,
     Quote,
     Trello,
-    Trends,
     Weather
 } from '../components';
 
@@ -28,7 +27,6 @@ const Portrait = () => {
                 </div>
                 <div className="col col-6 d-flex flex-column row-gap-1">
                     <News />
-                    <Trends />
                 </div>
             </div>
         </div>

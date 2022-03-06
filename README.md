@@ -1,8 +1,6 @@
 # dashboard
 A web based dashboard that is used as a digital bulletin board.
 
-This project includes components that connect to the [Midnight Train](https://github.com/adam-dill/midnight-train) and [Reddit Trends](https://github.com/adam-dill/reddit-trends) projects.
-
 ![Dashboard Screenshot](./readme/screenshot.jpg)
 
 In order to build this project, you will need to create a API.js file in the src directory and add the required API keys from the different services. The file should look like below.

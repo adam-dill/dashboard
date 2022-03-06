@@ -5,7 +5,6 @@ import newsReducer from "./newsReducer";
 import quoteReducer from "./quoteReducer";
 import timeReducer from "./timeReducer";
 import trelloReducer from "./trelloReducer";
-import trendsReducer from "./trendsReducer";
 import weatherReducer from "./weatherReducer";
 
 export const formatLastUpdate = (date) => {
@@ -25,5 +24,4 @@ export default combineReducers({
     quote: quoteReducer,
     calendar: calendarReducer,
     trello: trelloReducer,
-    trends: trendsReducer,
 });

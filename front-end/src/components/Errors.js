@@ -28,7 +28,6 @@ const mapStateToProps = state => ({
         state.news.error,
         state.quote.error,
         state.trello.error,
-        state.trends.error,
         state.weather.error
     ]
 });

@@ -5,7 +5,6 @@ import {
     fetchNews,
     fetchTrello,
     fetchQuote,
-    fetchTrends,
     fetchBackground
  } from "./redux/actions";
 
@@ -34,10 +33,6 @@ const DataCollector = (store) => {
     // Quote
     store.dispatch(fetchQuote());
     daily(store, fetchQuote, 5);
-
-    // Trends
-    store.dispatch(fetchTrends());
-    daily(store, fetchTrends, 5);
 
     // Background
     store.dispatch(fetchBackground());

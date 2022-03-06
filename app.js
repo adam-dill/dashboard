@@ -28,7 +28,6 @@ const urls = {
     QUOTE: "https://quotes.rest/qod?language=en",
     CALENDAR: `https://calendarific.com/api/v2/holidays?&api_key={0}&country=US&year=${year}`,
     BACKGROUND: `https://wall.adamdill.com/api/images?key={0}&group=1`,
-    TRENDS: `http://reddit-trends.adamdill.com//trends/limit/1`,
     TRELLO: `https://api.trello.com/1/lists/{0}/cards?key={1}&token={2}`,
 };
 

@@ -5,7 +5,6 @@ import {
     News,
     Quote,
     Trello,
-    Trends,
     Weather,
     Errors
 } from '../components';
@@ -31,7 +30,6 @@ const Landscape = () => {
                 </div>
                 <div className="col col-4 d-flex flex-column row-gap-1">
                     <Quote />
-                    <Trends />
                     <Errors />
                 </div>
             </div>
