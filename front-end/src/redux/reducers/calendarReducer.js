@@ -26,6 +26,19 @@ const calendarReducer = (state = initialState, action) => {
         case FETCH_CALENDAR_SUCCESS:
             // All done: set loading "false".
             // Also, replace the items with the ones from the server
+            const now = new Date();
+            const end = new Date();
+            end.setDate(now.getDate() + 7);
+            const within = (target, start, end) => {
+                return (
+                    target.getFullYear() >= start.getFullYear() &&
+                    target.getFullYear() <= end.getFullYear() &&
+                    target.getMonth() >= start.getMonth() &&
+                    target.getMonth() <= end.getMonth() &&
+                    target.getDate() >= start.getDate() &&
+                    target.getDate() <= end.getDate()
+                );
+            };
             return {
                 ...state,
                 loading: false,
@@ -34,16 +47,14 @@ const calendarReducer = (state = initialState, action) => {
                     .map(item => {
                         return {
                             "name": item.name,
-                            "date": item.date.iso
+                            "date": new Date(
+                                item.date.datetime.year,
+                                item.date.datetime.month - 1,
+                                item.date.datetime.day
+                            )
                         }
                     })
-                    .filter(item => {
-                        const now = new Date();
-                        const end = new Date();
-                        end.setDate(now.getDate() + 7);
-                        const target = new Date(item.date);
-                        return target.getTime() >= now.getTime() && target.getTime() <= end.getTime();
-                    })
+                    .filter(item => within(item.date, now, end))
                     .filter((item, index, arr) => {
                         // check if there is another of these further in the list
                         const duplicates = arr.find((v, i) => {
