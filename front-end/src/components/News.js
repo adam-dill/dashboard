@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
 
 const News = (props) => {
-    const { error, loading, lastUpdate, articles, max=4, delay=180000 } = props;
+    const { error, loading, lastUpdate, articles, max=4, delay=90000 } = props;
     const [display, setDisplay] = useState([]);
 
     useEffect(() => {
