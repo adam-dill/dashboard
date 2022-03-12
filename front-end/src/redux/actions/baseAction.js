@@ -2,7 +2,6 @@ export const api = "http://localhost:5000/api/v1";
 
 export function fetchData(endpoint, begin, success, failure) {
     return (dispatch) => {
-        console.log('fetchData', endpoint, begin, success, failure)
         dispatch({type: begin});
         return fetch(`${api}${endpoint}`)
             .then(handleErrors)

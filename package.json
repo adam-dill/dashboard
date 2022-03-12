@@ -8,7 +8,7 @@
         "build": "npm install && npm --prefix front-end install && npm --prefix front-end run build",
         "backend": "cross-env NODE_ENV=dev nodemon app.js",
         "start": "npm run backend & cross-env REACT_APP_ENV=dev npm --prefix front-end run start",
-        "prod": "node app.js & serve ./public"
+        "prod": "node app.js"
     },
     "repository": {
         "type": "git",

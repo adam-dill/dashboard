@@ -9,6 +9,7 @@ const app = express();
 const port = 5000;
 
 app.use(cors());
+app.use(express.static('public'));
 console.log('environment: ', process.env.NODE_ENV);
 
 app.get("/api/v1/ping", (req, res) => {
