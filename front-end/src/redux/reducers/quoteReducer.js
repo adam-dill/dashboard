@@ -33,8 +33,6 @@ const quoteReducer = (state = initialState, action) => {
                 lastUpdate: formatLastUpdate(action.lastUpdate),
                 quote: action.data.quoteText,
                 author: action.data.quoteAuthor
-                //quote: action.data.contents.quotes[0].quote,
-                //author: action.data.contents.quotes[0].author
             };
 
         case FETCH_QUOTE_FAILURE:

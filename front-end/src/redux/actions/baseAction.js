@@ -1,19 +1,28 @@
 export const api = "http://localhost:5000/api/v1";
 
-export function fetchData(endpoint, beginFn, successFn, failureFn) {
+export function fetchData(endpoint, begin, success, failure) {
     return (dispatch) => {
-        dispatch(beginFn());
+        console.log('fetchData', endpoint, begin, success, failure)
+        dispatch({type: begin});
         return fetch(`${api}${endpoint}`)
             .then(handleErrors)
             .then((res) => res.json())
             .then((data) => {
-                dispatch(successFn(data));
+                dispatch({
+                    type: success,
+                    lastUpdate: new Date(),
+                    data
+                });
                 return data;
             })
-            .catch((error) => dispatch(failureFn({
-                title: `${endpoint}`,
-                message: error.message
-            })));
+            .catch((error) => dispatch({
+                type: failure,
+                lastUpdate: new Date(),
+                error: {
+                    title: endpoint,
+                    message: error.message
+                }
+            }));
     };
 }
 

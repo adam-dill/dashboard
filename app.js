@@ -25,7 +25,6 @@ const year = new Date().getFullYear();
 const urls = {
     WEATHER: `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly&units=imperial&appid={0}`,
     NEWS: `https://newsapi.org/v2/top-headlines?country=us&apiKey={0}`,
-    //QUOTE: "https://quotes.rest/qod?language=en",
     QUOTE: "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json",
     CALENDAR: `https://calendarific.com/api/v2/holidays?&api_key={0}&country=US&year=${year}`,
     BACKGROUND: `https://wall.adamdill.com/api/images?key={0}&group=1`,
