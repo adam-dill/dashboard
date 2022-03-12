@@ -1,8 +1,9 @@
 export const api = "http://localhost:5000/api/v1";
 
-export function fetchData(endpoint, begin, success, failure) {
+export function fetchData(endpoint, recall, begin, success, failure) {
     return (dispatch) => {
         dispatch({type: begin});
+        
         return fetch(`${api}${endpoint}`)
             .then(handleErrors)
             .then((res) => res.json())
@@ -16,10 +17,11 @@ export function fetchData(endpoint, begin, success, failure) {
             })
             .catch((error) => dispatch({
                 type: failure,
-                lastUpdate: new Date(),
                 error: {
                     title: endpoint,
-                    message: error.message
+                    message: error.message,
+                    lastUpdate: new Date(),
+                    recall
                 }
             }));
     };
