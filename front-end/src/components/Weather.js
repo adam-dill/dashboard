@@ -23,7 +23,7 @@ const Icon = {
 }
 
 const Weather = (props) => {
-    const { error, loading, forcast } = props;
+    const { error, loading, forcast, color } = props;
 
     if (loading) return null;
     if (error) {
@@ -60,6 +60,7 @@ const mapStateToProps = state => ({
     loading: state.weather.loading,
     error: state.weather.error,
     forcast: state.weather.forcast,
+    color: state.background.color,
   });
 
 export default connect(mapStateToProps)(Weather);

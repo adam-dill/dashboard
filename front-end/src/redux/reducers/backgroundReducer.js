@@ -1,7 +1,8 @@
 import {
     FETCH_BACKGROUND_BEGIN,
     FETCH_BACKGROUND_SUCCESS,
-    FETCH_BACKGROUND_FAILURE
+    FETCH_BACKGROUND_FAILURE,
+    UPDATE_PRIMARY_COLOR
 } from "../actions/backgroundAction";
 
 const initialState = {
@@ -47,6 +48,12 @@ const backgroundReducer = (state = initialState, action) => {
                 loading: false,
                 error: action.error
             };
+
+        case UPDATE_PRIMARY_COLOR:
+            return {
+                ...state,
+                color: action.color
+            }
 
         default:
             // ALWAYS have a default case in a reducer
