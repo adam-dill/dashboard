@@ -19,8 +19,8 @@ app.get("/api/v1/ping", (req, res) => {
     });
 });
 
-const latitude = 43.0490693;
-const longitude = -88.0059109;
+const latitude = 28.51739856096562;
+const longitude = -81.23756221103967;
 const year = new Date().getFullYear();
 
 const urls = {

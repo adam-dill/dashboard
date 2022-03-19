@@ -32,7 +32,7 @@ const DataCollector = (store) => {
 
     // Quote
     store.dispatch(fetchQuote());
-    daily(store, fetchQuote, 5);
+    daily(store, fetchQuote);
 
     // Background
     store.dispatch(fetchBackground());

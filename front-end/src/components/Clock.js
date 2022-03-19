@@ -27,7 +27,7 @@ const mapStateToProps = (state) => ({
     cst: state.clock.cst,
     month: state.clock.month,
     day: state.clock.day,
-    date: state.clock.date
+    date: state.clock.date,
 });
 
 export default connect(mapStateToProps)(Clock);
