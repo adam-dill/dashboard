@@ -4,6 +4,7 @@ import {
     FETCH_CALENDAR_FAILURE
 } from "../actions/calendarAction";
 import { formatLastUpdate } from "./rootReducer";
+import { isAfter, isBefore } from "date-fns";
 
 const initialState = {
     lastUpdate: null,
@@ -29,14 +30,17 @@ const calendarReducer = (state = initialState, action) => {
             const now = new Date();
             const end = new Date();
             end.setDate(now.getDate() + 7);
+            const isToday = date => {
+                return (
+                    date.getFullYear() === now.getFullYear() &&
+                    date.getMonth() === now.getMonth() &&
+                    date.getDate() === now.getDate()
+                );
+            }
             const within = (target, start, end) => {
                 return (
-                    target.getFullYear() >= start.getFullYear() &&
-                    target.getFullYear() <= end.getFullYear() &&
-                    target.getMonth() >= start.getMonth() &&
-                    target.getMonth() <= end.getMonth() &&
-                    target.getDate() >= start.getDate() &&
-                    target.getDate() <= end.getDate()
+                    (isToday(target) || isAfter(target, start)) &&
+                    isBefore(target, end)
                 );
             };
             return {
