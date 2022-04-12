@@ -29,7 +29,7 @@ const calendarReducer = (state = initialState, action) => {
             // Also, replace the items with the ones from the server
             const now = new Date();
             const end = new Date();
-            end.setDate(now.getDate() + 7);
+            end.setDate(now.getDate() + 4);
             const isToday = date => {
                 return (
                     date.getFullYear() === now.getFullYear() &&
