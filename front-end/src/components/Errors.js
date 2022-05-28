@@ -3,9 +3,10 @@ import { connect } from "react-redux";
 import { formatLastUpdate } from '../redux/reducers/rootReducer';
 
 const Errors = ({errors, dispatch}) => {
-    
     const filtered = errors
-        .filter(value => !!value);
+        .filter(value => !!value)
+        .filter(value => value.title !== '/news'); // hack to prevent news reloading
+        
     if (filtered.length === 0) return null;
 
     filtered.forEach(element => {
