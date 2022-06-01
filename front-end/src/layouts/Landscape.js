@@ -2,7 +2,6 @@ import React from 'react';
 import {
     Calendar,
     Clock,
-    News,
     Quote,
     Trello,
     Weather,
@@ -26,7 +25,7 @@ const Landscape = () => {
                     <Calendar />
                 </div>
                 <div className="col col-4 d-flex flex-column row-gap-1">
-                    <News />
+                    
                 </div>
                 <div className="col col-4 d-flex flex-column row-gap-1">
                     <Quote />

@@ -2,7 +2,6 @@ import {
     updateTime,
     fetchWeather,
     fetchCalendar,
-    fetchNews,
     fetchTrello,
     fetchQuote,
     fetchBackground
@@ -21,10 +20,6 @@ const DataCollector = (store) => {
     // Calendar
     store.dispatch(fetchCalendar());
     daily(store, fetchCalendar);
-
-    // News
-    store.dispatch(fetchNews());
-    delay(store, fetchNews, 60);
 
     // Trello
     store.dispatch(fetchTrello());

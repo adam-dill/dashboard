@@ -3,7 +3,6 @@ import {
     Calendar,
     Clock,
     Errors,
-    News,
     Quote,
     Trello,
     Weather
@@ -26,7 +25,7 @@ const Portrait = () => {
                     <Calendar />
                 </div>
                 <div className="col col-6 d-flex flex-column row-gap-1">
-                    <News max={6} />
+                    
                 </div>
             </div>
         </div>

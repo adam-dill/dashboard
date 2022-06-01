@@ -23,7 +23,7 @@ const Icon = {
 }
 
 const Weather = (props) => {
-    const { error, loading, forcast, color } = props;
+    const { error, loading, forcast } = props;
 
     if (loading) return null;
     if (error) {
