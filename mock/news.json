@@ -1,201 +1,84 @@
 {
     "status": "ok",
-    "totalResults": 36,
+    "totalResults": 38,
     "articles": [
         {
             "source": {
-                "id": "the-washington-post",
-                "name": "The Washington Post"
+                "id": "cnn",
+                "name": "CNN"
             },
-            "author": "Annabelle Timsit",
-            "title": "Family Dollar closes 400 stores, recalls products after FDA finds decaying dead rodents in warehouse - The Washington Post",
-            "description": "The FDA found « insanitary conditions » at a Family Dollar distribution facility in West Memphis, Ark., and said some products could have been contaminated.",
-            "url": "https://www.washingtonpost.com/nation/2022/02/20/family-dollar-recall-fda-rodents/",
-            "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/I67UUISAEAI6TBNNO6PPAX6Z3A.jpg &w =1440",
-            "publishedAt": "2022-02-20T16:22:48Z",
-            "content": "Family Dollar, which is owned by the retail giant Dollar Tree, announced a voluntary recall late Friday of some products that came from the West Memphis facility.\r\nThe recall covers Food and Drug Adm… [+4276 chars]"
+            "author": "Sonia Moghe, CNN",
+            "title": "Jury finds both Amber Heard and Johnny Depp liable for defamation - CNN",
+            "description": "A jury has found both Amber Heard and Johnny Depp liable for defamation in their lawsuits against each other.",
+            "url": "https://www.cnn.com/2022/06/01/entertainment/johnny-depp-amber-heard-verdict/index.html",
+            "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220524111724-01-johnny-depp-amber-heard-trial-split-super-tease.jpg",
+            "publishedAt": "2022-06-01T20:24:00Z",
+            "content": null
         },
         {
             "source": {
                 "id": null,
-                "name": "Deadline"
+                "name": "Barron's"
             },
-            "author": "Anthony D'Alessandro",
-            "title": "‘Uncharted’ Soars To $51M 4-Day, ‘Dog’ Barks $18M+ At Presidents Day Weekend Box Office – Sunday Update - Deadline",
-            "description": "SUNDAY AM UPDATE: Refresh for more analysis and chart There’s plenty to be happy about at the Presidents Day weekend box office with many truths proven as Sony’s Uncharted overperforms to $51M over 4-days, and MGM/UAR’s female skewing Dog rises to $18M. Among…",
-            "url": "https://deadline.com/2022/02/box-office-uncharted-dog-tom-holland-channing-tatum-1234956548/",
-            "urlToImage": "https://deadline.com/wp-content/uploads/2022/02/Uncharted.jpg?w=1000",
-            "publishedAt": "2022-02-20T15:54:00Z",
-            "content": "SUNDAY AM UPDATE: Refresh for more analysis and chart There’s plenty to be happy about at the Presidents Day weekend box office with many truths proven as Sony’s Uncharted overperforms to $51M over 4… [+17607 chars]"
-        },
-        {
-            "source": {
-                "id": "the-washington-post",
-                "name": "The Washington Post"
-            },
-            "author": "Rachel Pannett, Jennifer Hassan, Steve Hendrix, Isabelle Khurshudyan",
-            "title": "Russia-Ukraine live updates and latest news on border crisis - The Washington Post",
-            "description": "The threat of full-scale invasion intensified Saturday amid shelling in Ukraine's eastern separatist regions, as Ukrainian President Volodymyr Zelensky called on Russian President Vladimir Putin to meet him and seek a diplomatic resolution to the crisis.",
-            "url": "https://www.washingtonpost.com/world/2022/02/20/russia-ukraine-updates/",
-            "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://d1i4t8bqe7zgj6.cloudfront.net/02-19-2022/t_8caa4fa2ae4b481b845fe481e29e30e6_name_64dfe550_91b0_11ec_8ddd_52136988d263_scaled.jpg &w =1440",
-            "publishedAt": "2022-02-20T15:45:00Z",
-            "content": "MOSCOW Belaruss defense minister extended military exercises with Russian forces that were otherwise set to end Sunday, and announced a joint task force to fight back if necessary. \r\nRussian and Bela… [+1862 chars]"
-        },
-        {
-            "source": {
-                "id": "politico",
-                "name": "Politico"
-            },
-            "author": null,
-            "title": "Harris offers support for defiant Ukrainian president - POLITICO",
-            "description": "\"He came here make a very clear point that he does not stand alone,\" she said of Zelenskyy.",
-            "url": "https://www.politico.com/news/2022/02/20/kamala-harris-munich-security-00010383",
-            "urlToImage": "https://static.politico.com/75/18/07e5ec7a44b19b6f6d3254fa1f01/germany-munich-security-conference-harris-64168.jpg",
-            "publishedAt": "2022-02-20T15:37:00Z",
-            "content": "Speaking in the city that was the location of the infamous 1938 agreement that allowed German dictator Adolf Hitler to dismember and then gobble up Czechoslovakia without penalty, Zelenskyy warned of… [+1468 chars]"
+            "author": "Jack Denton, Jacob Sonenshine",
+            "title": "Stock Market Today: Dow Falls, Salesforce Gains, Amazon Rises - Barron's",
+            "description": "The market is ticking down as investors seek direction from the jobs market on Fed policy.",
+            "url": "https://www.barrons.com/articles/stock-market-today-51654075598",
+            "urlToImage": "https://images.barrons.com/im-473530/social",
+            "publishedAt": "2022-06-01T20:06:00Z",
+            "content": "The stock market dropped Wednesday following still-strong economic data and the start of the Federal Reserves quantitative tightening. The \r\nDow Jones Industrial Average\r\n fell 177 points, or 0.5%, w… [+6147 chars]"
         },
         {
             "source": {
                 "id": null,
                 "name": "New York Times"
             },
-            "author": "Steven Lee Myers, Kevin Draper",
-            "title": "With Olympics Closing Ceremony, China Celebrates a Joyless Triumph - The New York Times",
-            "description": "The Games ended without disaster but overshadowed by a doping scandal, rising tensions in Europe and anxiety over the future of the sporting movement.",
-            "url": "https://www.nytimes.com/2022/02/20/world/asia/olympics-closing-ceremony-beijing.html",
-            "urlToImage": "https://static01.nyt.com/images/2022/02/20/sports/olympics/beijing-closing-ceremony-46/beijing-closing-ceremony-46-facebookJumbo.jpg",
-            "publishedAt": "2022-02-20T15:11:30Z",
-            "content": "Chinese officials accused the United States and other nations of politicizing the Olympics, denouncing President Bidens diplomatic boycott as a farce. And yet China also injected its own political el… [+1745 chars]"
+            "author": "Mike Isaac",
+            "title": "Sheryl Sandberg Steps Down From Facebook’s Parent Company, Meta - The New York Times",
+            "description": "The longtime chief operating officer of Facebook’s parent company, Ms. Sandberg said it was “time for her to write the next chapter of my life.”",
+            "url": "https://www.nytimes.com/2022/06/01/technology/sheryl-sandberg-facebook.html",
+            "urlToImage": "https://static01.nyt.com/images/2022/06/01/business/01sandberg/01sandberg-facebookJumbo.jpg",
+            "publishedAt": "2022-06-01T19:50:30Z",
+            "content": "Sheryl Sandberg, the chief operating officer of Meta and the longtime second in command to its founder, Mark Zuckerberg, said on Wednesday that she was stepping down from the company after 14 years.\r… [+567 chars]"
         },
         {
             "source": {
-                "id": null,
-                "name": "Tampa Bay Times"
+                "id": "associated-press",
+                "name": "Associated Press"
             },
-            "author": null,
-            "title": "Bucs’ Arians lashes out at report, denies any rift with Brady - Tampa Bay Times",
-            "description": "The head coach says he’s “pissed off” about a recent report that says their relationship had soured, in part because of Arians altering game plans.",
-            "url": "https://www.tampabay.com/sports/bucs/2022/02/19/bucs-arians-lashes-out-at-report-denies-any-rift-with-brady/",
-            "urlToImage": "https://www.tampabay.com/resizer/r95JWYOrCt5j1hJtNHMabIkMrn4=/800x450/smart/cloudfront-us-east-1.images.arcpublishing.com/tbt/CU3SVCBUNBGIZHJJ6QCHE3KZLY.JPG",
-            "publishedAt": "2022-02-20T15:05:00Z",
-            "content": "TAMPA Bruce Arians doesnt believe Tom Brady will come out of retirement. But the Bucs coach is certain his relationship with the seven-time Super Bowl-winning quarterback is not why he left the game … [+4623 chars]"
+            "author": "Carolyn Thompson",
+            "title": "Buffalo supermarket gunman indicted on terror, hate charge - The Associated Press",
+            "description": "BUFFALO, N.Y. (AP) — The white 18-year-old man accused of fatally shooting 10 Black people at a Buffalo supermarket was charged Wednesday by a grand jury with domestic terrorism motivated by hate and 10 counts of first-degree murder.",
+            "url": "https://apnews.com/article/buffalo-supermarket-shooting-politics-shootings-indictments-1ce595dbd268f0d6550c2dee2652b38e",
+            "urlToImage": "https://storage.googleapis.com/afs-prod/media/0f93a0791dd947e2b38df89b8e7c0a2b/3000.jpeg",
+            "publishedAt": "2022-06-01T19:42:06Z",
+            "content": "BUFFALO, N.Y. (AP) The white 18-year-old man accused of fatally shooting 10 Black people at a Buffalo supermarket was charged Wednesday by a grand jury with domestic terrorism motivated by hate and 1… [+3718 chars]"
         },
         {
             "source": {
-                "id": "fox-news",
-                "name": "Fox News"
+                "id": "ars-technica",
+                "name": "Ars Technica"
             },
-            "author": "Julia Musto",
-            "title": "Historic photos show the first American to orbit Earth on 60th anniversary of Mercury-Atlas 6 mission - Fox News",
-            "description": "Sunday marks 60 years since NASA astronaut John Glenn became the first American to orbit Earth.",
-            "url": "https://www.foxnews.com/science/photos-first-american-orbit-earth-60-years-later",
-            "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2022/02/p2.png",
-            "publishedAt": "2022-02-20T15:02:08Z",
-            "content": "Sunday marks 60 years since NASA astronaut John Glenn became the first American to orbit Earth. \r\nOn Feb. 20, 1962, the \"Mercury Seven\" member set out on the agency's three-orbit Mercury-Atlas 6 miss… [+5468 chars]"
+            "author": "Scharon Harding",
+            "title": "Same price, different niche: New Dell UltraSharp matches Studio Display at $1,600 - Ars Technica",
+            "description": "Both monitors offer boosted image quality, built-in webcams with particular appeal to Mac owners.",
+            "url": "https://arstechnica.com/gadgets/2022/06/dell-ultrasharp-4k-webcam-monitor-challenges-apple-studio-display-at-1600/",
+            "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2022/01/IMG-1778-760x380.jpg",
+            "publishedAt": "2022-06-01T19:38:20Z",
+            "content": "Enlarge/ We checked out the Dell UltraSharp U3223QZ in person in January. \r\n26 with 21 posters participating\r\nOn Tuesday, Dell listed the UltraSharp U3223QZ monitor for $1,600. The display would like… [+3352 chars]"
         },
         {
             "source": {
-                "id": null,
-                "name": "YouTube"
+                "id": "ars-technica",
+                "name": "Ars Technica"
             },
-            "author": null,
-            "title": "Why GM Ditched Heated Seats In The Middle Of Winter - CNBC",
-            "description": null,
-            "url": "https://www.youtube.com/supported_browsers?next_url=https:%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGrS9j7K4M-s",
-            "urlToImage": null,
-            "publishedAt": "2022-02-20T15:00:56Z",
-            "content": "Your browser isnt supported anymore. Update it to get the best YouTube experience and our latest features. Learn more\r\nRemind me later"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "TMZ"
-            },
-            "author": "TMZ Staff",
-            "title": "'Baywatch' Star Alexandra Daddario's Home Targeted by Irate Man with Gun - TMZ",
-            "description": "\"Baywatch\" actress Alexandra Daddario had the scare of her life Saturday ... when an irate man with a loaded gun went to her home and went off screaming something about her.",
-            "url": "https://www.tmz.com/2022/02/20/alexandra-daddario-baywatch-gun-stalker-arrested/",
-            "urlToImage": "https://imagez.tmz.com/image/a7/16by9/2022/02/20/a760e64083e54154973225b8477608b6_xl.jpg",
-            "publishedAt": "2022-02-20T14:57:00Z",
-            "content": "\"Baywatch\" actress Alexandra Daddario had the scare of her life Saturday ... when an irate man with a loaded gun went to her home and went off screaming something about her.\r\nLAPD cops rushed to the … [+671 chars]"
-        },
-        {
-            "source": {
-                "id": "cnn",
-                "name": "CNN"
-            },
-            "author": "Melissa Alonso, CNN",
-            "title": "1 officer is dead, another is injured after a police helicopter crashed in southern California, officials say - CNN",
-            "description": "A police officer died and another was injured after a police helicopter crashed in southern California Saturday night, officials said.",
-            "url": "https://www.cnn.com/2022/02/20/us/california-police-helicopter-crash/index.html",
-            "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220219224106-ca-police-helicopter-crash-0219-super-tease.jpg",
-            "publishedAt": "2022-02-20T14:52:00Z",
-            "content": "(CNN)A police officer died and another was injured after a police helicopter crashed in southern California Saturday night, officials said. \r\nThe two officers were aboard the Huntington Beach Police … [+1288 chars]"
-        },
-        {
-            "source": {
-                "id": "the-washington-post",
-                "name": "The Washington Post"
-            },
-            "author": "Karla Adam, William Booth",
-            "title": "Queen Elizabeth II tests positive for covid, is experiencing 'mild cold like symptoms,' palace says - The Washington Post",
-            "description": "The British monarch, 95, is expecting to “continue light duties\" in the coming week, the palace said.",
-            "url": "https://www.washingtonpost.com/world/2022/02/20/queen-elizabeth-covid-positive/",
-            "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/F3DALDESIQI6ZOZROT6ANQFDUU.jpg &w =1440",
-            "publishedAt": "2022-02-20T14:40:06Z",
-            "content": "Her son and heir, Prince Charles, tested positive for the virus and went into isolation 10 days earlier, after being at Windsor with the queen. Charless wife, Camilla, has since had a positive test, … [+4914 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "YouTube"
-            },
-            "author": null,
-            "title": "Epstein associate found dead in French prison cell - Reuters",
-            "description": "Jean-Luc Brunel, a longtime French modeling agent who was detained in December 2020 as part of an inquiry into allegations of rape, sexual assault and sexual...",
-            "url": "https://www.youtube.com/watch?v=w0JXQ33cqwY",
-            "urlToImage": "https://i.ytimg.com/vi/w0JXQ33cqwY/maxresdefault.jpg",
-            "publishedAt": "2022-02-20T14:39:57Z",
-            "content": null
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "TMZ"
-            },
-            "author": "TMZ Staff",
-            "title": "'Empire' Actress Lindsey Pearlman Confirmed Dead After Going Missing - TMZ",
-            "description": "Lindsey Pearlman, the actress with credits that include \"Empire\" and \"General Hospital\" was found dead 3 days after disappearing ... the LAPD now confirms.",
-            "url": "https://www.tmz.com/2022/02/20/general-hospital-actress-lindsey-pearlman-dead-dies-suicide-body/",
-            "urlToImage": "https://imagez.tmz.com/image/a6/16by9/2022/02/20/a6ef70ae46cf4e22bc5ca3528f85eee2_xl.jpg",
-            "publishedAt": "2022-02-20T14:21:00Z",
-            "content": "Lindsey Pearlman, the actress with credits that include \"Empire\" and \"General Hospital\" was found dead 3 days after disappearing ... the LAPD now confirms.\r\nThe body of the 43-year-old was found Frid… [+1150 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Nintendo Life"
-            },
-            "author": "Thomas Whitehead",
-            "title": "\"Shovel Knight Feels Like Our 'Mario', But We Kept Wondering What Our 'Zelda' Might Be\" - Nintendo Life",
-            "description": "Yacht Club Games discusses the creative process for Mina the Hollower",
-            "url": "https://www.nintendolife.com/features/shovel-knight-feels-like-our-mario-but-we-kept-wondering-what-our-zelda-might-be",
-            "urlToImage": "https://images.nintendolife.com/a9d92d905f7d9/1280x720.jpg",
-            "publishedAt": "2022-02-20T14:00:00Z",
-            "content": "Subscribe to Nintendo Life on YouTube\r\nYacht Club Games is a company that needs little introduction, particular thanks to the huge success and acclaim for Shovel Knight, a title that had multiple maj… [+15104 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Push Square"
-            },
-            "author": "Sammy Barker",
-            "title": "Horizon Forbidden West Is Getting Review Bombed on PS5, PS4 for No Reason - Push Square",
-            "description": "0/10, apparently",
-            "url": "https://www.pushsquare.com/news/2022/02/horizon-forbidden-west-is-getting-review-bombed-on-ps5-ps4-for-no-reason",
-            "urlToImage": "https://images.pushsquare.com/831f990d110a7/1280x720.jpg",
-            "publishedAt": "2022-02-20T13:45:00Z",
-            "content": "Image: Push Square\r\nIt wouldnt be a major video game release without gamers exhibiting embarrassing behaviour. Horizon Forbidden West has been quietly racking up disproportionately negative reviews o… [+1563 chars]"
+            "author": "Ars Staff",
+            "title": "Today’s best deals: Nintendo Switch Online bundle, $1 Xbox Game Pass, and more - Ars Technica",
+            "description": "Dealmaster also has Logitech mice, Sonos speakers, and Eufy indoor cameras.",
+            "url": "https://arstechnica.com/staff/2022/06/todays-best-deals-nintendo-switch-online-bundle-1-xbox-game-pass-and-more/",
+            "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2022/06/dealmaster060122-760x380.jpg",
+            "publishedAt": "2022-06-01T18:59:33Z",
+            "content": "0 with 0 posters participating\r\nIt's Wednesday, which means the time has come for another Dealmaster. Our latest roundup of the best deals from around the web includes a bundle at Best Buy that gives… [+7981 chars]"
         },
         {
             "source": {
@@ -203,64 +86,181 @@
                 "name": "Reuters"
             },
             "author": null,
-            "title": "Ethiopia turns on the turbines at giant Nile hydropower plant - Reuters",
-            "description": "Ethiopia began producing electricity on Sunday from its Grand Ethiopian Renaissance Dam (GERD), a multi-billion-dollar hydropower plant on the River Nile that neighbours Sudan and Egypt have worried will cause water shortages downstream.",
-            "url": "https://www.reuters.com/world/africa/ethiopia-turns-turbines-giant-nile-hydropower-plant-2022-02-20/",
-            "urlToImage": "https://www.reuters.com/resizer/QLJ-9kuFIpwyqdL9_4yOkSesRL4=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/752J7PEJOVK2NCNBMZI3DYKYPQ.jpg",
-            "publishedAt": "2022-02-20T13:26:00Z",
-            "content": "ADDIS ABABA, Feb 20 (Reuters) - Ethiopia began producing electricity on Sunday from its Grand Ethiopian Renaissance Dam (GERD), a multi-billion-dollar hydropower plant on the River Nile that neighbou… [+2021 chars]"
+            "title": "Biden announces new $700 million in military aid for Ukraine - Reuters",
+            "description": "U.S. President Joe Biden announced on Wednesday a new $700 million weapons package for Ukraine that will include high mobility artillery rocket systems, which can accurately hit targets as far away as 80 km (50 miles).",
+            "url": "https://www.reuters.com/business/aerospace-defense/us-rocket-systems-ukraine-not-meant-strike-russia-white-house-official-2022-06-01/",
+            "urlToImage": "https://www.reuters.com/resizer/94xG7bMlG6H7duMB6AggNJhCWaw=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/I42FFJ2OWZLZVM44ZL7G4MAH5A.jpg",
+            "publishedAt": "2022-06-01T18:58:00Z",
+            "content": "WASHINGTON, June 1 (Reuters) - U.S. President Joe Biden announced on Wednesday a new $700 million weapons package for Ukraine that will include high mobility artillery rocket systems, which can accur… [+4218 chars]"
         },
         {
             "source": {
-                "id": null,
-                "name": "Investor's Business Daily"
-            },
-            "author": "Investor's Business Daily",
-            "title": "Markets On Ukraine Invasion Watch; 5 Stocks That Don't Suck - Investor's Business Daily",
-            "description": "The major indexes are nearing their Jan. 24 lows with Russia war fears in focus.",
-            "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-world-awaiting-ukraine-invasion-5-stocks-that-dont-suck/",
-            "urlToImage": "https://www.investors.com/wp-content/uploads/2021/04/Stock-bidenspeaks-02-shutt.jpg",
-            "publishedAt": "2022-02-20T12:46:00Z",
-            "content": "Dow Jones futures will open on Sunday evening, along with S &amp;P 500 futures and Nasdaq futures. The stock market rally suffered significant damage last week, with the major indexes below key suppor… [+13841 chars]"
-        },
-        {
-            "source": {
-                "id": "politico",
-                "name": "Politico"
+                "id": "reuters",
+                "name": "Reuters"
             },
             "author": null,
-            "title": "The group that brought down Keystone XL faces agonies of its own - POLITICO",
-            "description": "It was the upstart that changed the face of America’s environmental movement. But 350.org, founded by the legendary Bill McKibben, has been laid low by a budget crunch, equity fights and union strife.",
-            "url": "https://www.politico.com/news/2022/02/20/350org-mckibben-boeve-keystone-00009866",
-            "urlToImage": "https://static.politico.com/de/b4/c5359cf94052816b7229cc63af63/main.Colman.350.Org-Lede.jpg",
-            "publishedAt": "2022-02-20T12:00:00Z",
-            "content": "A June 2020 report by a consultant hired by the organization after the layoffs illuminated those feelings.\r\nConfidence and trust in the leadership of the organisation - both senior staff and board - … [+9032 chars]"
+            "title": "Elon Musk tells Tesla staff: return to office or leave - Reuters",
+            "description": "Tesla Inc <a href=\"https://www.reuters.com/companies/TSLA.O\" target=\"_blank\">(TSLA.O)</a> Chief Executive Elon Musk has asked employees to return to the office or leave the company, according to an email sent to employees and seen by Reuters.",
+            "url": "https://www.reuters.com/technology/musk-memo-tesla-staff-return-office-or-leave-company-2022-06-01/",
+            "urlToImage": "https://www.reuters.com/resizer/yMbKv1SoP3YjBq8lUx6nnoFHzLM=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/3BOVTEPMA5KXPJYK5UFVJHDGSU.jpg",
+            "publishedAt": "2022-06-01T18:37:00Z",
+            "content": "June 1 (Reuters) - Tesla Inc (TSLA.O) Chief Executive Elon Musk has asked employees to return to the office or leave the company, according to an email sent to employees and seen by Reuters.\r\n\"Everyo… [+4420 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Ash Parrish",
+            "title": "Diablo Immortal feels uncomfortably mercenary - The Verge",
+            "description": "As Activision Blizzard’s new mobile game, Diablo Immortal, slowly rolls out, the game itself feels like a traditional Diablo experience tailored for mobile with all the microtransactions a mobile game entails.",
+            "url": "https://www.theverge.com/2022/6/1/23150381/diablo-immortal-preview-mobile-activision-blizzard",
+            "urlToImage": "https://cdn.vox-cdn.com/thumbor/AaMw8bQMRhPOeiTy-ldtOKt9nfc=/0x38:1920x1043/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23601546/diabloimmortal.png",
+            "publishedAt": "2022-06-01T18:25:07Z",
+            "content": "Diablo Immortals satisfying mobile dungeon crawling is marred by a microtransaction-stuffed economy\r\nImage: Blizzard Entertainment\r\nDiablo Immortals announcement upset a lot of fans of the franchise … [+5990 chars]"
         },
         {
             "source": {
                 "id": null,
-                "name": "Live Science"
+                "name": "CNBC"
             },
-            "author": "Patrick Pester",
-            "title": "Are there any giant animals humans haven't discovered yet? - Livescience.com",
-            "description": "Don't hold your breath on Bigfoot.",
-            "url": "https://www.livescience.com/giant-animals-humans-have-not-discovered",
-            "urlToImage": "https://cdn.mos.cms.futurecdn.net/tnkEznDD9PR2rtzpXMNcDH-1200-80.jpg",
-            "publishedAt": "2022-02-20T12:00:00Z",
-            "content": "In 2020, researchers saw for the first time what may be the longest animal ever\r\n. The creature, spotted in a deep-sea canyon off Australia, was a roughly 150-foot-long (45 meters) siphonophore. Each… [+6010 chars]"
+            "author": "Diana Olick",
+            "title": "Mortgage rates rise sharply after three weeks of easing - CNBC",
+            "description": "Mortgage rates are surging higher again this week after falling for the past three weeks.",
+            "url": "https://www.cnbc.com/2022/06/01/mortgage-rates-rise-sharply-after-three-weeks-of-easing.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/107069717-1654096253511-gettyimages-1241032474-US_HOUSING_MARET.jpeg?v=1654096314&w=1920&h=1080",
+            "publishedAt": "2022-06-01T18:16:34Z",
+            "content": "Mortgage rates rose sharply this week, after pulling back over the last three weeks.\r\nThe 30-year fixed hit 5.36% Monday and then moved higher again Tuesday to 5.47%, according to Mortgage News Daily… [+1354 chars]"
         },
         {
             "source": {
-                "id": "associated-press",
-                "name": "Associated Press"
+                "id": "the-verge",
+                "name": "The Verge"
             },
-            "author": "Will Graves",
-            "title": "Flores hired to Steelers staff; lawsuit against NFL proceeds - Associated Press",
-            "description": "PITTSBURGH (AP) — Brian Flores is back in the NFL. The Pittsburgh Steelers hired the former Miami Dolphins coach on Saturday to serve as a senior defensive assistant. Flores will specialize in working with Pittsburgh's linebackers, a group that includes NFL D…",
-            "url": "https://apnews.com/article/brian-flores-miami-dolphins-pittsburgh-steelers-nfl-sports-b061e9e5a5b34cb5f8417df4238f694e",
-            "urlToImage": "https://storage.googleapis.com/afs-prod/media/11f49fceb854408390974389968691e2/2682.jpeg",
-            "publishedAt": "2022-02-20T11:08:56Z",
-            "content": "PITTSBURGH (AP) Brian Flores is back in the NFL.\r\nThe Pittsburgh Steelers hired the former Miami Dolphins coach on Saturday to serve as a senior defensive assistant. Flores will specialize in working… [+3619 chars]"
+            "author": "Charles Pulliam-Moore",
+            "title": "Our Flag Means Death is setting sail for a heartbreaking season 2 - The Verge",
+            "description": "HBO has just renewed Our Flag Means Death for a second season of stories about swashbuckling pirates falling in love on the high seas.",
+            "url": "https://www.theverge.com/2022/6/1/23150328/our-flag-means-death-season-2",
+            "urlToImage": "https://cdn.vox-cdn.com/thumbor/Y1iSsxIL32A8ZbWLEFj13eZAfV4=/0x138:1920x1143/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23601409/rhys_darby_taika_waititi_6.jpeg",
+            "publishedAt": "2022-06-01T18:03:02Z",
+            "content": "Season 2 will explore what it feels like to have your heart broken\r\nEd Teach caressing Stede Bonnets cheek, as a friend.\r\nImage: HBO\r\nJust in time for this years Pride Month, HBO has announced that O… [+1769 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Times"
+            },
+            "author": "Tariq Panja",
+            "title": "40,000 Fake Tickets at the Champions League Final? Actually, It Was 2,589. - The New York Times",
+            "description": "The French authorities blamed tens of thousands of counterfeit tickets for the chaos before Saturday’s Champions League final. The official count was far lower.",
+            "url": "https://www.nytimes.com/2022/06/01/sports/soccer/champions-league-final-tickets.html",
+            "urlToImage": "https://static01.nyt.com/images/2022/06/01/multimedia/01soccer-tickets3/01soccer-tickets3-facebookJumbo.jpg",
+            "publishedAt": "2022-06-01T18:02:22Z",
+            "content": "The hearing lasted longer than an hour, ending with little clarity and a doubling down by the officials on their previous claims, again without evidence to support their conclusions.\r\nThat prompted o… [+1502 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "ESPN"
+            },
+            "author": "Mark Schlabach",
+            "title": "RBC ends sponsorship relationships with Dustin Johnson, Graeme McDowell amid their involvement in Saudi-backed golf series - ESPN",
+            "description": "RBC has ended its relationships with Dustin Johnson and Graeme McDowell after the PGA Tour players were included in the field for the first LIV Golf Invitational Series event.",
+            "url": "https://www.espn.com/golf/story/_/id/34019933/rbc-ends-sponsorship-relationships-dustin-johnson-graeme-mcdowell-amid-involvement-saudi-backed-golf-series",
+            "urlToImage": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2021%2F0610%2Fr865794_1296x729_16%2D9.jpg",
+            "publishedAt": "2022-06-01T17:43:44Z",
+            "content": "COLUMBUS, Ohio -- RBC has ended its relationships with Dustin Johnson and Graeme McDowell after the PGA Tour players were included in the field for the first LIV Golf Invitational Series event.\r\nIn a… [+1868 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Paul R. La Monica",
+            "title": "Brace yourselves for an economic 'hurricane,' Jamie Dimon says - CNN",
+            "description": "Jamie Dimon is no meteorologist, but the JPMorgan Chase CEO is predicting an economic \"hurricane\" caused by the war in Ukraine, rising inflation pressures and interest rate hikes from the Federal Reserve.",
+            "url": "https://www.cnn.com/2022/06/01/economy/jamie-dimon-jpmorgan-chase-economy/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/191110201249-jamie-dimon-file-0925.jpg?c=16x9&q=w_800,c_fill",
+            "publishedAt": "2022-06-01T17:28:00Z",
+            "content": "Jamie Dimon is no meteorologist, but the JPMorgan Chase CEO is predicting an economic hurricane caused by the war in Ukraine, rising inflation pressures and interest rate hikes from the Federal Reser… [+2341 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "INSIDER"
+            },
+            "author": "Rebecca Cohen",
+            "title": "Off-duty Border Patrol agent defends cops' actions during Texas shooting - Insider",
+            "description": "The officer said he believes police were \"doing everything they could\" as authorities face criticism for their delayed response to the shooting.",
+            "url": "https://www.insider.com/uvalde-shooting-off-duty-border-patrol-agent-defends-cops-actions-2022-6",
+            "urlToImage": "https://i.insider.com/628f8e7cf099c4001956709a?width=1200&format=jpeg",
+            "publishedAt": "2022-06-01T17:27:12Z",
+            "content": "An off-duty US Customs and Border Protection agent who responded to the shooting at Robb Elementary School in Uvalde, Texas, last week defended police actions during the massacre. \r\nJacob Albarado to… [+1285 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "The Guardian"
+            },
+            "author": "Edward Helmore",
+            "title": "Uvalde teacher closed propped-open door before shooting, Texas officials say - The Guardian US",
+            "description": "Door did not automatically lock, contradicting investigators’ earlier account in which they said teacher had propped open door",
+            "url": "https://amp.theguardian.com/us-news/2022/jun/01/texas-school-shooting-propped-open-door-closed-teacher",
+            "urlToImage": "https://i.guim.co.uk/img/media/a01913d07c46fac9f7627b9b886a37b08b319fd0/0_215_5269_3162/master/5269.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=cc301e03a0c2dc629cc027403bf39542",
+            "publishedAt": "2022-06-01T16:56:00Z",
+            "content": "A teacher did not, as previously stated, leave a door propped open with a rock during the massacre at Robb elementary school in Uvalde, Texas, last week, but closed it before the attacks began only f… [+3090 chars]"
+        },
+        {
+            "source": {
+                "id": "axios",
+                "name": "Axios"
+            },
+            "author": "Herb Scribner",
+            "title": "Texas Gov. excludes gun control from special session on school shootings - Axios",
+            "description": "Abbott's letter listed school safety, mental health and social media as some areas of focus for the session.",
+            "url": "https://www.axios.com/2022/06/01/texas-greg-abbott-gun-violence-solutions",
+            "urlToImage": "https://images.axios.com/EtSK13jYgKr-eJIo_FktExcwgmo=/0x88:2048x1240/1366x768/2022/06/01/1654097528594.jpg",
+            "publishedAt": "2022-06-01T16:46:02Z",
+            "content": "Texas Gov. Greg Abbott (R) has asked state lawmakers in a new letter to find solutions to \"prevent future school shootings\" but gun control isn't among the items mentioned as areas of focus.\r\nWhy it … [+1208 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Megan Marples",
+            "title": "If you drink these types of coffee, you could have a lower death risk - CNN",
+            "description": "Depending on how you prefer your coffee, you could have a lower death risk compared to non-coffee drinkers.",
+            "url": "https://www.cnn.com/2022/06/01/health/sweetened-coffee-death-risk-wellness/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/220531161813-sugar-coffee-stock.jpg?c=16x9&q=w_800,c_fill",
+            "publishedAt": "2022-06-01T16:38:00Z",
+            "content": "The earthy, caffeine-infused coffee drink may hold more power than waking you up in the morning.\r\nDrinking either sweetened or unsweetened coffee is associated with a lower death risk compared with n… [+3842 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Spencer Kimball",
+            "title": "WHO says monkeypox has been spreading undetected as global cases rise to more than 550 - CNBC",
+            "description": "\"We don't really know whether it's too late to contain. What the WHO and all member states are trying to do is prevent onward spread,\" Lewis said.",
+            "url": "https://www.cnbc.com/2022/06/01/who-says-monkeypox-has-been-spreading-undetected-as-global-cases-rise-to-more-than-550.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/107069660-1654091513274-gettyimages-1240892053-RAFAPRESS_24052022-00791.jpeg?v=1654091556&w=1920&h=1080",
+            "publishedAt": "2022-06-01T16:23:38Z",
+            "content": "The World Health Organization on Wednesday confirmed more than 550 monkeypox cases across 30 countries as the virus continues to spread across the globe.\r\nWHO Director-General Tedros Adhanom Ghebreye… [+3630 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": null,
+            "title": "Hinckley, who shot Reagan in 1981, granted full freedom - Reuters",
+            "description": "A federal judge on Wednesday granted John Hinckley, the man who shot and wounded President Ronald Reagan and three others in a 1981 assassination attempt, unconditional release from the remaining restrictions he faced, U.S. media reported.",
+            "url": "https://www.reuters.com/legal/government/reagans-shooter-expected-be-freed-all-remaining-restrictions-2022-06-01/",
+            "urlToImage": "https://www.reuters.com/resizer/GUbZnyGF2pEK_WTGbQR3svpicV0=/728x381/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/ZZNII2Z4K5MFBGIG6TRQ2ZD7AE.jpg",
+            "publishedAt": "2022-06-01T16:06:00Z",
+            "content": "June 1 (Reuters) - A federal judge on Wednesday granted John Hinckley, the man who shot and wounded President Ronald Reagan and three others in a 1981 assassination attempt, unconditional release fro… [+2124 chars]"
         }
     ]
 }

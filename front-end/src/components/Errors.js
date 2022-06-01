@@ -31,7 +31,6 @@ const mapStateToProps = state => ({
     errors: [
         state.background.error,
         state.calendar.error,
-        state.news.error,
         state.quote.error,
         state.trello.error,
         state.weather.error
